@@ -1,17 +1,15 @@
 <script>
 	export let cardGroupHovered = false;
-	export let charizardCardHovered = false;
+	export let mewtwoCardHovered = false;
 </script>
 
 <div
-	id="charizard"
-	class="{cardGroupHovered ? 'card-group-hovered' : ''} {charizardCardHovered
-		? 'card-hovered'
-		: ''}"
+	id="mewtwo"
+	class="{cardGroupHovered ? 'card-group-hovered' : ''} {mewtwoCardHovered ? 'card-hovered' : ''}"
 ></div>
 
 <style>
-	#charizard {
+	#mewtwo {
 		width: 12vmin;
 		position: absolute;
 		top: 50%;
@@ -21,7 +19,7 @@
 			transform 800ms cubic-bezier(0.28, 0.93, 0.34, 0.85),
 			opacity 0.4s,
 			z-index 0.8s;
-		background-image: url('https://www.serebii.net/card/pokemondetectivepikachu/5.jpg');
+		background-image: url('https://www.serebii.net/card/hiddenfates/31.jpg');
 		background-position: center;
 		background-size: cover;
 		/* transform: translate(-50%, -50%); */
@@ -33,7 +31,7 @@
 
 	.card-group-hovered {
 		opacity: 0.6;
-		transform: translate(200%, -160%) rotate(-15deg);
+		transform: translate(-280%, -170%) rotate(15deg);
 	}
 
 	.card-hovered {
