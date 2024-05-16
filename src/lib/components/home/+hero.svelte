@@ -15,17 +15,17 @@
     <div class="card-group">
         <div id="charizard" class="little-card card"></div>
 
-        <div id="card-1" class="big-card card" on:click={navToContact}> <div class="card-text"><a id="contact-text" href='/about'>Contact</a> </div> </div>
+        <div id="card-1" class="big-card card" on:click={navToContact}> <div class="card-text"><p>Contact</p></div> </div>
         
         <div id="bulbasaur" class="little-card card"></div>
         
         <div id="mewtwo" class="little-card card"></div>
         
-        <div  id="card-2" class="big-card card" on:click={navToAbout}> <div class="card-text"><a id="about-me-text" href='/about'>About Me</a> </div> </div>
+        <div  id="card-2" class="big-card card" on:click={navToAbout}> <div class="card-text"><p>About Me</p> </div> </div>
         
         <div id="lugia" class="little-card card"></div>
         
-        <div id="card-3" class="big-card card" on:click={navToWork}> <div class="card-text"><a id="work-text" href='/about'>Work</a> </div> </div>
+        <div id="card-3" class="big-card card" on:click={navToWork}> <div class="card-text"><p>Work</p> </div> </div>
     </div>
 </div>
 
