@@ -1,9 +1,9 @@
 <script>
-    import Home from '$lib/components/home/+hero.svelte'
+	import Home from '$lib/components/home/+hero.svelte';
 </script>
 
 <div>
-    <Home />
+	<Home />
 </div>
 
 <style></style>
