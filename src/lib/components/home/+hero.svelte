@@ -1,7 +1,8 @@
 <script>
     import Charizard from './charizard-card.svelte';
   
-    let hovered = false;
+    let cardGroupHovered = false;
+    let cardHovered = false;
   
     function navToAbout() {
       window.location.href = '/about';
@@ -19,14 +20,19 @@
   <div class="flex justify-center items-center min-h-screen">
     <div
       class="card-group"
-      on:mouseover={() => (hovered = true)}
-      on:mouseout={() => (hovered = false)}
+      on:mouseover={() => cardGroupHovered = true}
+      on:mouseout={() => cardGroupHovered = false}
     >
-      <Charizard {hovered} />
+      <div 
+        on:mouseover={() => cardHovered = true}
+        on:mouseout={() => cardHovered = false}
+        >
+          <Charizard {cardGroupHovered} {cardHovered} />
+      </div>
   
       <div id="card-1" class="big-card card" on:click={navToContact}>
         <div class="card-text">
-          <a id="contact-text" href='/about'>Contact</a>
+          <p>Contact</p>
         </div>
       </div>
   
@@ -36,7 +42,7 @@
   
       <div id="card-2" class="big-card card" on:click={navToAbout}>
         <div class="card-text">
-          <a id="about-me-text" href='/about'>About Me</a>
+          <p>About Me</p>
         </div>
       </div>
   
@@ -44,7 +50,7 @@
   
       <div id="card-3" class="big-card card" on:click={navToWork}>
         <div class="card-text">
-          <a id="work-text" href='/about'>Work</a>
+          <p>Work</p>
         </div>
       </div>
     </div>
@@ -149,9 +155,9 @@
       transform: translate(75%, 16%) rotate(24deg);
     }
   
-    .card-group:hover > #charizard {
+    /* .card-group:hover > #charizard {
       transform: translate(200%, -160%) rotate(-15deg);
-    }
+    } */
   
     .card-group:hover > #bulbasaur {
       transform: translate(160%, 140%) rotate(15deg);
