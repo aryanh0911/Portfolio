@@ -1,11 +1,11 @@
 <script>
     export let cardGroupHovered = false;
     export let cardHovered = false;
-  </script>
+</script>
   
   <div id="charizard" class="{cardGroupHovered? 'card-group-hovered':''} {cardHovered? 'card-hovered':''}"></div>
   
-  <style>
+<style>
     #charizard {
       width: 12vmin;
       position: absolute;
@@ -32,5 +32,5 @@
         opacity: 1;
         z-index: 99;
     }
-  </style>
+</style>
   
