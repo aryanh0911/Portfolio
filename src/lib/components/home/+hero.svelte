@@ -10,8 +10,12 @@
 	let mewtwoCardHovered = false;
 	let lugiaCardHovered = false;
 
+	import { fade } from 'svelte/transition';
+	let pageTransition = 0;
+
 	function navToAbout() {
 		window.location.href = '/about';
+		pageTransition = !pageTransition;
 	}
 
 	function navToContact() {
