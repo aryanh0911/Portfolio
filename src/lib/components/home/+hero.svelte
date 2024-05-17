@@ -23,59 +23,61 @@
 	}
 </script>
 
-<div class="flex justify-center items-center min-h-screen">
-	<div
-		class="card-group"
-		on:mouseover={() => (cardGroupHovered = true)}
-		on:mouseout={() => (cardGroupHovered = false)}
-	>
+<section>
+	<div class="flex justify-center items-center min-h-screen">
 		<div
-			on:mouseover={() => (charizardCardHovered = true)}
-			on:mouseout={() => (charizardCardHovered = false)}
+			class="card-group"
+			on:mouseover={() => (cardGroupHovered = true)}
+			on:mouseout={() => (cardGroupHovered = false)}
 		>
-			<Charizard {cardGroupHovered} {charizardCardHovered} />
-		</div>
-
-		<div id="card-1" class="big-card card" on:click={navToContact}>
-			<div class="card-text">
-				<p>Contact</p>
+			<div
+				on:mouseover={() => (charizardCardHovered = true)}
+				on:mouseout={() => (charizardCardHovered = false)}
+			>
+				<Charizard {cardGroupHovered} {charizardCardHovered} />
 			</div>
-		</div>
 
-		<div
-			on:mouseover={() => (bulbasaurCardHovered = true)}
-			on:mouseout={() => (bulbasaurCardHovered = false)}
-		>
-			<Bulbasaur {cardGroupHovered} {bulbasaurCardHovered} />
-		</div>
-
-		<div
-			on:mouseover={() => (mewtwoCardHovered = true)}
-			on:mouseout={() => (mewtwoCardHovered = false)}
-		>
-			<Mewtwo {cardGroupHovered} {mewtwoCardHovered} />
-		</div>
-
-		<div id="card-2" class="big-card card" on:click={navToAbout}>
-			<div class="card-text">
-				<p>About Me</p>
+			<div id="card-1" class="big-card card" on:click={navToContact}>
+				<div class="card-text">
+					<p>Contact</p>
+				</div>
 			</div>
-		</div>
 
-		<div
-			on:mouseover={() => (lugiaCardHovered = true)}
-			on:mouseout={() => (lugiaCardHovered = false)}
-		>
-			<Lugia {cardGroupHovered} {lugiaCardHovered} />
-		</div>
+			<div
+				on:mouseover={() => (bulbasaurCardHovered = true)}
+				on:mouseout={() => (bulbasaurCardHovered = false)}
+			>
+				<Bulbasaur {cardGroupHovered} {bulbasaurCardHovered} />
+			</div>
 
-		<div id="card-3" class="big-card card" on:click={navToWork}>
-			<div class="card-text">
-				<p>Work</p>
+			<div
+				on:mouseover={() => (mewtwoCardHovered = true)}
+				on:mouseout={() => (mewtwoCardHovered = false)}
+			>
+				<Mewtwo {cardGroupHovered} {mewtwoCardHovered} />
+			</div>
+
+			<div id="card-2" class="big-card card" on:click={navToAbout}>
+				<div class="card-text">
+					<p>About Me</p>
+				</div>
+			</div>
+
+			<div
+				on:mouseover={() => (lugiaCardHovered = true)}
+				on:mouseout={() => (lugiaCardHovered = false)}
+			>
+				<Lugia {cardGroupHovered} {lugiaCardHovered} />
+			</div>
+
+			<div id="card-3" class="big-card card" on:click={navToWork}>
+				<div class="card-text">
+					<p>Work</p>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 
 <style>
 	.card-group {
