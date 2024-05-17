@@ -54,7 +54,7 @@
 		</div>
 	</div>
 
-	<div id="para" class="w-[90vw] md:w-[70vw] lg:w-[40vw] ml-auto mr-auto mt-10 bg-[#282828] p-6 rounded-lg">
+	<div id="para" class="w-[90vw] md:w-[70vw] lg:w-[40vw] ml-auto mr-auto mt-10  p-6 rounded-lg bg-[#2222229b]">
 		<p class="text-slate-300 text-lg">
 			heyo :) I'm Aryan, a web-developer and a tech-enthusiast. I'm interested in learning the ins
 			and outs of the web, how things work over there, and the possible ways I can implement what
