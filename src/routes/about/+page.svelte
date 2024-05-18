@@ -1,6 +1,6 @@
 <script>
 	import { gsap } from 'gsap';
-	import { ScrollTrigger} from 'gsap/ScrollTrigger'
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 	import { onMount } from 'svelte';
 	gsap.registerPlugin(ScrollTrigger);
 	import pfp1 from '$lib/assets/about-page/pfp1.jpeg';
@@ -30,22 +30,23 @@
 		
         tl.from('#para', {
 			y: 20,
-			x: 200,
 			opacity: 0,
-			scrollTrigger:{
-				trigger: '#para',
-				start: 'top 80%',
-				stop: 'bottom 20%',
-				markers: true				
-			}
+			// scrollTrigger:{
+			// 	trigger: '#para',
+			// 	markers: true,
+			// 	scrub: 1,
+			// 	start: 'top 20%',
+			// 	end: 'top 20%',
+			// 	pin: true
+			// }
 		});
 
 	});
 </script>
 
 <section>
-	<div id="cover-page" on:click={navToHome} class="w-full h-[8rem] bg-center lg:h-[12rem]">
-		<div id="back-btn" class="pl-6 pt-4 w-fit cursor-pointer">
+	<div id="cover-page" class="w-full h-[8rem] bg-center lg:h-[12rem]">
+		<div id="back-btn" on:click={navToHome} class="pl-6 pt-4 w-fit cursor-pointer">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
@@ -63,8 +64,8 @@
 		</div>
 	</div>
 
-	<div id="para" class="w-[90vw] md:w-[70vw] lg:w-[40vw] ml-auto mr-auto mt-10  p-6 rounded-lg bg-[#2222229b]">
-		<p class="text-slate-300 text-lg mt-80">
+	<div id="para" class="w-[90vw] md:w-[70vw] lg:w-[40vw] ml-auto mr-auto mt-20  p-6 rounded-lg bg-[#2222229b]">
+		<p class="text-slate-300 text-lg">
 			heyo :) I'm Aryan, a web-developer and a tech-enthusiast. I'm interested in learning the ins
 			and outs of the web, how things work over there, and the possible ways I can implement what
 			I've learnt into building projects.
@@ -87,6 +88,7 @@
 	}
 
 	#para {
+		/* margin-top: 80vh; */
 		visibility: hidden;
 	}
 
