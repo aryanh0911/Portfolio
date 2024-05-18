@@ -1,6 +1,8 @@
 <script>
 	import { gsap } from 'gsap';
+	import { ScrollTrigger} from 'gsap/ScrollTrigger'
 	import { onMount } from 'svelte';
+	gsap.registerPlugin(ScrollTrigger);
 	import pfp1 from '$lib/assets/about-page/pfp1.jpeg';
 
     function navToHome() {
@@ -28,7 +30,14 @@
 		
         tl.from('#para', {
 			y: 20,
-			opacity: 0
+			x: 200,
+			opacity: 0,
+			scrollTrigger:{
+				trigger: '#para',
+				start: 'top 80%',
+				stop: 'bottom 20%',
+				markers: true				
+			}
 		});
 
 	});
@@ -55,7 +64,7 @@
 	</div>
 
 	<div id="para" class="w-[90vw] md:w-[70vw] lg:w-[40vw] ml-auto mr-auto mt-10  p-6 rounded-lg bg-[#2222229b]">
-		<p class="text-slate-300 text-lg">
+		<p class="text-slate-300 text-lg mt-80">
 			heyo :) I'm Aryan, a web-developer and a tech-enthusiast. I'm interested in learning the ins
 			and outs of the web, how things work over there, and the possible ways I can implement what
 			I've learnt into building projects.
