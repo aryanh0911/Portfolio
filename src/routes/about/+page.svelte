@@ -1,14 +1,17 @@
 <script>
 	import { gsap } from 'gsap';
-	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
 	gsap.registerPlugin(ScrollTrigger);
-	import pfp1 from '$lib/assets/about-page/pfp1.jpeg';
 
-    function navToHome() {
-        window.location.href = '/'
-    }
+	// ---Components---
+	import Cover from './cover.svelte'
 
+	function navToHome() {
+		window.location.href = '/';
+	}
+
+	// ---GSAP---
 	onMount(() => {
 		const tl = gsap.timeline({
 			onStart: () => {
@@ -24,13 +27,13 @@
 			duration: 0.4
 		});
 
-        tl.from('#pfp', {
-            opacity: 0,
-        });
-		
-        tl.from('#para', {
+		tl.from('#pfp', {
+			opacity: 0
+		});
+
+		tl.from('#para', {
 			y: 20,
-			opacity: 0,
+			opacity: 0
 			// scrollTrigger:{
 			// 	trigger: '#para',
 			// 	markers: true,
@@ -40,31 +43,16 @@
 			// 	pin: true
 			// }
 		});
-
 	});
 </script>
 
 <section>
-	<div id="cover-page" class="w-full h-[8rem] bg-center lg:h-[12rem]">
-		<div id="back-btn" on:click={navToHome} class="pl-6 pt-4 w-fit cursor-pointer">
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				viewBox="0 0 24 24"
-				width="2rem"
-				height="2rem"
-				fill="white"
-				><path
-					d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z"
-				></path></svg
-			>
-        </div>
+	<Cover on:click={navToHome} />
 
-		<div id="pfp" class="absolute right-[30%] top-[50%] md:right-[20%] md:top-[50%] lg:top-[65%]">
-			<img id="pfp-img" src={pfp1} alt="" class="" />
-		</div>
-	</div>
-
-	<div id="para" class="w-[90vw] md:w-[70vw] lg:w-[40vw] ml-auto mr-auto mt-20  p-6 rounded-lg bg-[#2222229b]">
+	<div
+		id="para"
+		class="w-[90vw] md:w-[70vw] lg:w-[40vw] ml-auto mr-auto mt-20 p-6 rounded-lg bg-[#2222229b]"
+	>
 		<p class="text-slate-300 text-lg">
 			heyo :) I'm Aryan, a web-developer and a tech-enthusiast who's interested in learning the ins
 			and outs of the web, how things work over there, and the possible ways I can implement what
@@ -80,27 +68,7 @@
 </section>
 
 <style>
-	#cover-page {
-		background-image: url('$lib/assets/about-page/vinyl.gif');
-		background-size: cover;
-		visibility: hidden;
-		position: relative;
-	}
-
 	#para {
-		/* margin-top: 80vh; */
 		visibility: hidden;
-	}
-
-	#pfp {
-		visibility: hidden;
-	}
-
-	#pfp img {
-		width: 8rem;
-		border: 2px solid #b1b1af;
-		padding: 3px;
-		border-radius: 50%;
-		box-shadow: 4px 4px 20px black;
 	}
 </style>
