@@ -66,7 +66,7 @@
 
 	<div id="para" class="w-[90vw] md:w-[70vw] lg:w-[40vw] ml-auto mr-auto mt-20  p-6 rounded-lg bg-[#2222229b]">
 		<p class="text-slate-300 text-lg">
-			heyo :) I'm Aryan, a web-developer and a tech-enthusiast. I'm interested in learning the ins
+			heyo :) I'm Aryan, a web-developer and a tech-enthusiast who's interested in learning the ins
 			and outs of the web, how things work over there, and the possible ways I can implement what
 			I've learnt into building projects.
 		</p>
