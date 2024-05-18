@@ -1,5 +1,5 @@
 <script>
-    import pfp1 from '$lib/assets/about-page/pfp1.jpeg';
+	import pfp1 from '$lib/assets/about-page/pfp1.jpeg';
 </script>
 
 <section>
@@ -27,11 +27,11 @@
 	#cover-page {
 		background-image: url('$lib/assets/about-page/vinyl.gif');
 		background-size: cover;
-		visibility: hidden;
 		position: relative;
+		visibility: hidden;
 	}
 
-    #pfp img {
+	#pfp img {
 		width: 8rem;
 		border: 2px solid #b1b1af;
 		padding: 3px;
