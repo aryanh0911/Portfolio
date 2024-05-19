@@ -12,6 +12,12 @@
 		window.location.href = '/';
 	}
 
+	function revealImageAndRedirect() {
+		setTimeout(() => {
+			window.open('https://www.youtube.com/aryan-hazarika', '_blank');
+		}, 1100);
+	}
+
 	// ---GSAP---
 	onMount(() => {
 		const tl = gsap.timeline({
@@ -56,15 +62,16 @@
 				<!--YouTube-->
 				<div
 					id="yt-reveal-container"
-					class="w-72 h-20 relative overflow-hidden rounded-lg cursor-pointer"
+					class="w-72 h-20 relative overflow-hidden rounded-xl cursor-pointer"
+					on:click={revealImageAndRedirect}
 				>
 					<div
-						class="absolute w-full h-full bg-[#f43b3b] hover:opacity-0 duration-500 p-1 flex justify-center items-center"
+						class="absolute w-full h-full bg-slate-500 hover:opacity-0 duration-500 p-1 flex justify-center items-center"
 					>
-						<p class="text-lg font-bold text-[white]">YouTube</p>
+						<p class="text-lg font-bold">YouTube</p>
 					</div>
 
-					<div id="youtube-reveal" class="w-full h-full p-1"></div>
+					<div id="youtube-reveal" class="bg-cyan-100 w-full h-full p-1"></div>
 				</div>
 			</div>
 		</div>
@@ -77,8 +84,5 @@
 			url('$lib/assets/about-page/youtube.png');
 		background-size: cover;
 		background-position: center bottom 20%;
-	}
-
-	#yt-reveal-container {
 	}
 </style>
