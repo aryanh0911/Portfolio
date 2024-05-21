@@ -12,12 +12,6 @@
 		window.location.href = '/';
 	}
 
-	function revealImageAndRedirect() {
-		setTimeout(() => {
-			window.open('https://www.youtube.com/aryan-hazarika', '_blank');
-		}, 1100);
-	}
-
 	// ---GSAP---
 	onMount(() => {
 		const tl = gsap.timeline({
@@ -57,21 +51,74 @@
 	<Cover on:click={navToHome} />
 	<main class="flex gap-4 flex-wrap justify-center mt-28 md:mt-32">
 		<Paragraph />
-		<div id="right-pane" class="">
+		<div id="right-pane" class="mt-auto mb-auto">
 			<div class="container flex flex-col gap-4">
 				<!--YouTube-->
 				<div
 					id="yt-reveal-container"
-					class="w-72 h-20 relative overflow-hidden rounded-xl cursor-pointer"
-					on:click={revealImageAndRedirect}
+					class="w-72 h-20 relative overflow-hidden rounded-lg cursor-pointer"
+					on:click={() =>
+						setTimeout(() => {
+							window.open('https://www.youtube.com/aryan-hazarika', '_blank');
+						}, 700)}
 				>
-					<div
-						class="absolute w-full h-full bg-slate-500 hover:opacity-0 duration-500 p-1 flex justify-center items-center"
+					<div id="yt-fg"
+						class="absolute w-full h-full bg-[#cf3c34] hover:opacity-0 duration-500 p-1 flex justify-center items-center"
 					>
-						<p class="text-lg font-bold">YouTube</p>
+						<p class="text-lg font-bold text-[almostblack]">YouTube</p>
 					</div>
+					<div id="youtube-reveal" class="w-full h-full p-1 overflow-hidden"></div>
+				</div>
 
-					<div id="youtube-reveal" class="bg-cyan-100 w-full h-full p-1"></div>
+				<!--SoundCloud-->
+				<div
+					id="soundcloud-reveal-container"
+					class="w-72 h-20 relative overflow-hidden rounded-xl cursor-pointer"
+					on:click={() =>
+						setTimeout(() => {
+							window.open('https://www.youtube.com/aryan-hazarika', '_blank');
+						}, 700)}
+				>
+					<div id="soundcloud-fg"
+						class="absolute w-full h-full bg-[#fb6827] hover:opacity-0 duration-500 p-1 flex justify-center items-center"
+					>
+						<p class="text-lg font-bold">SounCloud</p>
+					</div>
+					<div id="soundcloud-reveal" class="bg-cyan-100 w-full h-full p-1"></div>
+				</div>
+
+				<!--Spotify-->
+				<div
+					id="spotify-reveal-container"
+					class="w-72 h-20 relative overflow-hidden rounded-xl cursor-pointer"
+					on:click={() =>
+						setTimeout(() => {
+							window.open('https://www.youtube.com/aryan-hazarika', '_blank');
+						}, 700)}
+				>
+					<div id="spotify-fg"
+						class="absolute w-full h-full bg-[#25d865] hover:opacity-0 duration-500 p-1 flex justify-center items-center"
+					>
+						<p class="text-lg font-bold text">Spotify</p>
+					</div>
+					<div id="spotify-reveal" class="bg-cyan-100 w-full h-full p-1"></div>
+				</div>
+
+				<!--Goodreads-->
+				<div
+					id="goodreads-reveal-container"
+					class="w-72 h-20 relative overflow-hidden rounded-xl cursor-pointer"
+					on:click={() =>
+						setTimeout(() => {
+							window.open('https://www.youtube.com/aryan-hazarika', '_blank');
+						}, 700)}
+				>
+					<div id="goodreads-fg"
+						class="absolute w-full h-full bg-[#e9e5cd] hover:opacity-0 duration-500 p-1 flex justify-center items-center"
+					>
+						<p class="text-lg font-bold">Goodreads</p>
+					</div>
+					<div id="goodreads-reveal" class="bg-cyan-100 w-full h-full p-1"></div>
 				</div>
 			</div>
 		</div>
@@ -79,10 +126,51 @@
 </section>
 
 <style>
+	#yt-fg {
+		background-image: url('$lib/assets/about-page/contour-crp.png');
+		background-size: cover;
+		background-position: center;
+	}
 	#youtube-reveal {
 		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.573)),
 			url('$lib/assets/about-page/youtube.png');
 		background-size: cover;
 		background-position: center bottom 20%;
+	}
+
+	#soundcloud-fg {
+		background-image: url('$lib/assets/about-page/contour-crp.png');
+		background-size: cover;
+		background-position: center;
+	}
+	#soundcloud-reveal {
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.573)),
+			url('$lib/assets/about-page/soundcloud.png');
+		background-size: cover;
+		background-position: center bottom 95%;
+	}
+
+	#spotify-fg {
+		background-image: url('$lib/assets/about-page/contour-crp.png');
+		background-size: cover;
+		background-position: center;
+	}
+	#spotify-reveal {
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.573)),
+			url('$lib/assets/about-page/spotify.png');
+		background-size: cover;
+		background-position: center bottom 95%;
+	}
+
+	#goodreads-fg {
+		background-image: url('$lib/assets/about-page/contour-crp.png');
+		background-size: cover;
+		background-position: center;
+	}
+	#goodreads-reveal {
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.573)),
+			url('$lib/assets/about-page/goodreads.png');
+		background-size: cover;
+		background-position: center bottom 100%;
 	}
 </style>
