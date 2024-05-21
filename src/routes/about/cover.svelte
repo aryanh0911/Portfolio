@@ -25,7 +25,7 @@
 
 <style>
 	#cover-page {
-		background-image: url('$lib/assets/about-page/vinyl.gif');
+		background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.543)) ,url('$lib/assets/about-page/vinyl.gif');
 		background-size: cover;
 		position: relative;
 		visibility: hidden;

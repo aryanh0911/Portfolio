@@ -1,8 +1,8 @@
 <script>
 </script>
 
-<section>
-	<div id="para" class="w-[90vw] md:w-[60vw] lg:w-[40vw] max-w-[36rem] p-6 rounded-lg bg-[#2222229b]">
+<section class="mt-auto mb-auto">
+	<div id="para" class="w-[90vw] md:w-[60vw] lg:w-[40vw] max-w-[549.44px] p-6 rounded-lg bg-[#2222229b]">
 		<p class="text-slate-300 text-xl">
 			heyo :) I'm Aryan, a web-developer and a tech-enthusiast who's interested in learning the ins
 			and outs of the web, how things work over there, and the possible ways I can implement what
