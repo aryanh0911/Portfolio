@@ -19,6 +19,7 @@
 				document.querySelector('#cover-page').style.visibility = 'visible';
 				document.querySelector('#para').style.visibility = 'visible';
 				document.querySelector('#pfp').style.visibility = 'visible';
+				document.querySelector('#right-pane').style.visibility = 'visible';
 			}
 		});
 
@@ -44,6 +45,19 @@
 			// 	pin: true
 			// }
 		});
+
+		tl.from('#yt-reveal-container, #soundcloud-reveal-container, #spotify-reveal-container, #goodreads-reveal-container', {
+			y: 20,
+			x: 5,
+			opacity: 0,
+			stagger: .15,
+			// scrollTrigger:{
+			// 	trigger: '#right-pane',
+			// 	scrub: 1,
+			// 	markers: true,
+			// 	end: 'bottom 99%'
+			// }
+		})
 	});
 </script>
 
@@ -84,7 +98,7 @@
 					>
 						<p class="text-lg font-bold">SounCloud</p>
 					</div>
-					<div id="soundcloud-reveal" class="bg-cyan-100 w-full h-full p-1"></div>
+					<div id="soundcloud-reveal" class="w-full h-full p-1"></div>
 				</div>
 
 				<!--Spotify-->
@@ -101,7 +115,7 @@
 					>
 						<p class="text-lg font-bold text">Spotify</p>
 					</div>
-					<div id="spotify-reveal" class="bg-cyan-100 w-full h-full p-1"></div>
+					<div id="spotify-reveal" class="w-full h-full p-1"></div>
 				</div>
 
 				<!--Goodreads-->
@@ -118,7 +132,7 @@
 					>
 						<p class="text-lg font-bold">Goodreads</p>
 					</div>
-					<div id="goodreads-reveal" class="bg-cyan-100 w-full h-full p-1"></div>
+					<div id="goodreads-reveal" class="w-full h-full p-1"></div>
 				</div>
 			</div>
 		</div>
@@ -126,6 +140,10 @@
 </section>
 
 <style>
+	#right-pane {
+		visibility: hidden;
+	}
+
 	#yt-fg {
 		background-image: url('$lib/assets/about-page/contour-crp.png');
 		background-size: cover;
@@ -141,7 +159,7 @@
 	#soundcloud-fg {
 		background-image: url('$lib/assets/about-page/contour-crp.png');
 		background-size: cover;
-		background-position: center;
+		background-position: center 20%;
 	}
 	#soundcloud-reveal {
 		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.573)),
@@ -153,7 +171,7 @@
 	#spotify-fg {
 		background-image: url('$lib/assets/about-page/contour-crp.png');
 		background-size: cover;
-		background-position: center;
+		background-position: center 30%;
 	}
 	#spotify-reveal {
 		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.573)),
@@ -165,7 +183,7 @@
 	#goodreads-fg {
 		background-image: url('$lib/assets/about-page/contour-crp.png');
 		background-size: cover;
-		background-position: center;
+		background-position: center bottom 0%;
 	}
 	#goodreads-reveal {
 		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.573)),
