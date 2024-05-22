@@ -36,28 +36,42 @@
 		tl.from('#para', {
 			y: 20,
 			opacity: 0
-			// scrollTrigger:{
-			// 	trigger: '#para',
-			// 	markers: true,
-			// 	scrub: 1,
-			// 	start: 'top 20%',
-			// 	end: 'top 20%',
-			// 	pin: true
-			// }
 		});
 
-		tl.from('#yt-reveal-container, #soundcloud-reveal-container, #spotify-reveal-container, #goodreads-reveal-container', {
-			y: 20,
-			x: 5,
-			opacity: 0,
-			stagger: .15,
-			// scrollTrigger:{
-			// 	trigger: '#right-pane',
-			// 	scrub: 1,
-			// 	markers: true,
-			// 	end: 'bottom 99%'
-			// }
-		})
+		tl.from(
+			'#yt-reveal-container, #soundcloud-reveal-container, #spotify-reveal-container, #goodreads-reveal-container',
+			{
+				y: 20,
+				x: 5,
+				opacity: 0,
+				stagger: { each: 0.15, from: 'start' }
+			}
+		);
+
+		//Match Media GSAP
+		let mm = gsap.matchMedia();
+
+		mm.add('(max-width:767px)', () => {
+			let tl2 = gsap.timeline();
+
+			tl2.from(
+				'#yt-reveal-container, #soundcloud-reveal-container, #spotify-reveal-container, #goodreads-reveal-container',
+				{
+					y: 20,
+					x: 5,
+					opacity: 0,
+					stagger: { each: 0.15, from: 'start' },
+					scrollTrigger: {
+						trigger: '#right-pane',
+						scrub: 1,
+						// markers: true,
+						start: 'top 80%',
+						end: 'bottom bottom',
+						ease: 'power3.out'
+					}
+				}
+			);
+		});
 	});
 </script>
 
@@ -76,7 +90,8 @@
 							window.open('https://www.youtube.com/aryan-hazarika', '_blank');
 						}, 700)}
 				>
-					<div id="yt-fg"
+					<div
+						id="yt-fg"
 						class="absolute w-full h-full bg-[#cf3c34] hover:opacity-0 duration-500 p-1 flex justify-center items-center"
 					>
 						<p class="text-lg font-bold text-[almostblack]">YouTube</p>
@@ -93,7 +108,8 @@
 							window.open('https://www.youtube.com/aryan-hazarika', '_blank');
 						}, 700)}
 				>
-					<div id="soundcloud-fg"
+					<div
+						id="soundcloud-fg"
 						class="absolute w-full h-full bg-[#fb6827] hover:opacity-0 duration-500 p-1 flex justify-center items-center"
 					>
 						<p class="text-lg font-bold">SounCloud</p>
@@ -110,7 +126,8 @@
 							window.open('https://www.youtube.com/aryan-hazarika', '_blank');
 						}, 700)}
 				>
-					<div id="spotify-fg"
+					<div
+						id="spotify-fg"
 						class="absolute w-full h-full bg-[#25d865] hover:opacity-0 duration-500 p-1 flex justify-center items-center"
 					>
 						<p class="text-lg font-bold text">Spotify</p>
@@ -127,7 +144,8 @@
 							window.open('https://www.youtube.com/aryan-hazarika', '_blank');
 						}, 700)}
 				>
-					<div id="goodreads-fg"
+					<div
+						id="goodreads-fg"
 						class="absolute w-full h-full bg-[#e9e5cd] hover:opacity-0 duration-500 p-1 flex justify-center items-center"
 					>
 						<p class="text-lg font-bold">Goodreads</p>
