@@ -16,74 +16,62 @@
 	onMount(() => {
 		let mm = gsap.matchMedia();
 		mm.add({
-			isMobile_S: "(max-width: 320px)",
-			isMobile_M: "(max-width: 375px)",
-			isMobile_L: "(max-width: 425px)",
 			isTablet: "(max-width: 520px)",
 			isDesktop: "(min-width: 425px)",
 		}, (context) => {
-			let { isMobile_S, isMobile_M, isTablet, isMobile_L, isDesktop } = context.conditions;
+			let { isTablet } = context.conditions;
 
 			const tl = gsap.timeline({
 				onStart: () => {
-					document.querySelector('#cover-page').style.visibility = 'visible';
-					document.querySelector('#para').style.visibility = 'visible';
-					document.querySelector('#pfp').style.visibility = 'visible';
-					document.querySelector('#right-pane').style.visibility = 'visible';
+					gsap.set(['#cover-page', '#para', '#pfp', '#right-pane'], { visibility: 'visible' });
 				}
 			});
 
 			tl.from('#cover-page', {
 				opacity: 0,
 				y: 30,
+				duration: 0.3 
+			})
+			.from('#pfp', {
+				opacity: 0,
+				duration: 0.3 
+			})
+			.from('#para', {
+				y: 20,
+				opacity: 0,
+				duration: 0.5 
+			})
+			.from('#right-pane', {
+				opacity: 0,
+				y: 20,
 				duration: 0.4
 			});
 
-			tl.from('#pfp', {
-				opacity: 0
-			});
-
-			tl.from('#para', {
+			const staggerAnimation = {
 				y: 20,
-				opacity: 0
-			});
+				x: 5,
+				opacity: 0,
+				stagger: { each: 0.15, from: 'start' },
+				duration: 0.3 
+			};
 
-			if(isTablet) {
-				console.log("inside Tablet");
-				tl.from(
+			if (isTablet) {
+				staggerAnimation.scrollTrigger = {
+					trigger: '#right-pane',
+					scrub: 2,
+					// markers: true,
+					start: 'top 87%',
+					end: 'bottom bottom'
+				};
+			}
+
+			tl.from(
 				'#yt-reveal-container, #soundcloud-reveal-container, #spotify-reveal-container, #goodreads-reveal-container',
-					{
-						y: 20,
-						x: 5,
-						opacity: 0,
-						stagger: { each: 0.15, from: 'start' },
-						scrollTrigger: {
-							trigger: '#right-pane',
-							scrub: 2,
-							markers: true,
-							start:'top 80%',
-							end: 'bottom bottom'
-						}
-					}
-				);
-			}
-			else {
-				tl.from(
-					'#yt-reveal-container, #soundcloud-reveal-container, #spotify-reveal-container, #goodreads-reveal-container',
-					{
-						y: 20,
-						x: 5,
-						opacity: 0,
-						stagger: { each: 0.15, from: 'start' }
-					}
-				);
-			}
-
+				staggerAnimation
+			);
 
 		});
 	});
-
-
 </script>
 
 <section>
@@ -169,7 +157,7 @@
 </section>
 
 <style>
-	#right-pane {
+	#right-pane, #cover-page, #pfp, #para {
 		visibility: hidden;
 	}
 
