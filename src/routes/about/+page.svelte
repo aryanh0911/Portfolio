@@ -52,7 +52,7 @@
 				x: 5,
 				opacity: 0,
 				stagger: { each: 0.15, from: 'start' },
-				duration: 0.3 
+				duration: 0.3
 			};
 
 			if (isTablet) {
@@ -157,7 +157,7 @@
 </section>
 
 <style>
-	#right-pane, #cover-page, #pfp, #para {
+	#right-pane {
 		visibility: hidden;
 	}
 
