@@ -27,15 +27,7 @@
 			<p class="text-lg font-bold text-[almostblack]">{data.name}</p>
 		</div>
 		<div
-			id={data.id === 1
-				? 'youtube-reveal'
-				: data.id === 2
-					? 'soundcloud-reveal'
-					: data.id === 3
-						? 'spotify-reveal'
-						: data.id === 4
-							? 'goodreads-reveal'
-							: ' '}
+			id={data.revealId}
 			class="w-full h-full p-1 overflow-hidden"
 		></div>
 	</div>
