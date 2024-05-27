@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "YouTube",
+        "link": "https://www.youtube.com/aryan-hazarika",
+        "revealContainerId": "youtube-reveal-container",
+        "foregroundId": "youtube-fg",
+        "revealId": "youtube-reveal"
+    },
+    {
+        "id": 2,
+        "name": "SoundCloud",
+        "link": "https://www.soundcloud.com/aryan-hazarika",
+        "revealContainerId": "soundcloud-reveal-container",
+        "foregroundId": "soundcloud-fg",
+        "reveal-id": "soundcloud-reveal"
+    },
+    {
+        "id": 3,
+        "name": "Spotify",
+        "link": "https://open.spotify.com/playlist/46dhAMecxXSzs5aVdZVFHf?si=e99c0c37d1c24172",
+        "revealContainerId": "spotify-reveal-container",
+        "foregroundId": "spotify-fg",
+        "revealId": "spotify-reveal"
+    },
+    {
+        "id": 4,
+        "name": "Goodreads",
+        "link": "https://www.goodreads.com/review/list/178355393?ref=nav_mybooks",
+        "revealContainerId": "goodreads-reveal-container",
+        "foregroundId": "goodreads-fg",
+        "revealId": "goodreads-reveal"
+    }
+]
