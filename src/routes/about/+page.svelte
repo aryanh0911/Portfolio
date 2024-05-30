@@ -58,7 +58,7 @@
 							scrollTrigger: {
 								trigger: '#right-pane',
 								scrub: 2,
-								markers: true,
+								// markers: true,
 								start: 'top 87%',
 								end: 'bottom bottom'
 							}
