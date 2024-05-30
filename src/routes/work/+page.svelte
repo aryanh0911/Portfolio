@@ -83,12 +83,12 @@
 		</div>
 
 		<div class="floating-cards">
-			<div class="card-1 card"></div>
-			<div class="card-2 card"></div>
-			<div class="card-3 card"></div>
-			<div class="card-4 card"></div>
-			<div class="card-5 card"></div>
-			<div class="card-6 card"></div>
+			<div class="card-1 card rounded-md"></div>
+			<div class="card-2 card rounded-md"></div>
+			<div class="card-3 card rounded-md"></div>
+			<div class="card-4 card rounded-md"></div>
+			<div class="card-5 card rounded-md"></div>
+			<div class="card-6 card rounded-md"></div>
 		</div>
 	</div>
 </section>
