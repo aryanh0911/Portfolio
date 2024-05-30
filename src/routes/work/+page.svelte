@@ -31,6 +31,18 @@
 			},
 			1
 		);
+
+		heroCards.forEach(card => {
+			tl.to(card, {
+			y: gsap.utils.random(-5.5,-5),
+			stagger: 0.1,
+			repeat: -1,
+			yoyo: true,
+			duration: 2,
+		})
+		})
+
+
 		heroCards.forEach((card) => {
 			tl.to(card, {
 				yPercent: gsap.utils.random(-200, -50),
