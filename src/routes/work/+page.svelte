@@ -58,7 +58,10 @@
 		// 		markers: true
 		// 	}
 		// });
+
 	});
+
+
 </script>
 
 <section class="">
@@ -109,15 +112,16 @@
 	.floating-cards .card {
 		visibility: hidden;
 		aspect-ratio: 5/7;
-		position: aboslute;
+		position: absolute;
 		background-color: black;
 		cursor: pointer;
-		transition: scale 0.6s ease-in-out;
+		/* transition: scale 0.2s ease-in-out; */
 	}
 
-	.card:hover {
-		scale: 2;
-	}
+	/* .card:hover {
+        scale: 2;
+		opacity: 0;
+	} */
 
 	.card-1 {
 		width: 20.2rem;
