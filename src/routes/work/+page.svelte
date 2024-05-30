@@ -8,7 +8,18 @@
 
 	// ---GSAP---
 	onMount(() => {
-		const heroCards = [...document.querySelectorAll('.floating-cards .card')];
+		const heroCards = document.querySelectorAll('.card');
+
+		heroCards.forEach((card) => {
+			card.addEventListener('mouseenter', () => {
+				gsap.to(card, { scale: 1.02, duration: 0.3 });
+			});
+
+			card.addEventListener('mouseleave', () => {
+				gsap.to(card, { scale: 1, duration: 0.3 });
+			});
+		});
+
 		const tl = gsap.timeline({
 			onStart: () => {
 				gsap.set('#header-text, #header-text p span, .floating-cards .card', {
@@ -32,18 +43,17 @@
 			1
 		);
 
-		heroCards.forEach(card => {
-			tl.to(card, {
-			y: gsap.utils.random(-5.5,-5),
-			stagger: 0.1,
-			repeat: -1,
-			yoyo: true,
-			duration: 2,
-		})
-		})
-
-
 		heroCards.forEach((card) => {
+			tl.to(card, {
+				y: gsap.utils.random(-5.5, -5),
+				stagger: 0.1,
+				repeat: -1,
+				yoyo: true,
+				duration: 2
+			});
+		});
+
+		heroCards.forEach(card => {
 			tl.to(card, {
 				yPercent: gsap.utils.random(-200, -50),
 				ease: 'none',
@@ -52,28 +62,12 @@
 					start: 'top top',
 					end: 'bottom top',
 					scrub: true,
-					ease: 'none',
+					ease: 'none'
 					// markers: true
 				}
 			});
 		});
-
-		// tl.to('.floating-cards .card', {
-		// 	yPercent: gsap.utils.random(-200, -50),
-		// 	ease: 'none',
-		// 	scrollTrigger: {
-		// 		trigger: '#main-container',
-		// 		start: 'top top',
-		// 		end: 'bottom top',
-		// 		scrub: true,
-		// 		ease: 'none',
-		// 		markers: true
-		// 	}
-		// });
-
 	});
-
-
 </script>
 
 <section class="">
@@ -129,11 +123,6 @@
 		cursor: pointer;
 		/* transition: scale 0.2s ease-in-out; */
 	}
-
-	/* .card:hover {
-        scale: 2;
-		opacity: 0;
-	} */
 
 	.card-1 {
 		width: 20.2rem;
