@@ -92,8 +92,11 @@
 		display: grid;
 		place-content: center;
 		/* width: 100vw; */
+		max-width: 2049px;
 		min-height: 200vh;
 		display: relative;
+		margin-left: auto;
+		margin-right: auto;
 		/* overflow: hidden; */
 	}
 
