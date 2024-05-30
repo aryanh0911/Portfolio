@@ -43,31 +43,40 @@
 					.from('#right-pane', {
 						opacity: 0,
 						y: 20,
-						duration: 0.4
+						duration: 0.1
 					});
 
-				const staggerAnimation = {
-					y: 20,
-					x: 5,
-					opacity: 0,
-					stagger: { each: 0.15, from: 'start' },
-					duration: 0.3
-				};
-
 				if (isTablet) {
-					staggerAnimation.scrollTrigger = {
-						trigger: '#right-pane',
-						scrub: 2,
-						// markers: true,
-						start: 'top 87%',
-						end: 'bottom bottom'
-					};
+					tl.from(
+						'#youtube-reveal-container, #soundcloud-reveal-container, #spotify-reveal-container, #goodreads-reveal-container',
+						{
+							y: 20,
+							x: 5,
+							opacity: 0,
+							stagger: { each: 0.15, from: 'start' },
+							duration: 0.3,
+							scrollTrigger: {
+								trigger: '#right-pane',
+								scrub: 2,
+								markers: true,
+								start: 'top 87%',
+								end: 'bottom bottom'
+							}
+						}
+					);
+				} else {
+					tl.from(
+						'#youtube-reveal-container, #soundcloud-reveal-container, #spotify-reveal-container, #goodreads-reveal-container',
+						{
+							y: 20,
+							x: 5,
+							opacity: 0,
+							stagger: { each: 0.15, from: 'start' },
+							duration: 0.6
+						},
+						'-=.2'
+					);
 				}
-
-				tl.from(
-					'#youtube-reveal-container, #soundcloud-reveal-container, #spotify-reveal-container, #goodreads-reveal-container',
-					staggerAnimation
-				);
 			}
 		);
 	});
