@@ -138,6 +138,19 @@
 		@media (max-width: 320px) {
 			width: 14rem;
 		}
+		@media (max-width: 1645px) {
+			left: 2rem
+		}
+		@media (max-width: 1450px) {
+			left: 1rem
+		}
+		@media (max-width: 1392px) {
+			left: 0.5rem;
+		}
+		@media (max-width: 1212px) {
+			left: 50%;
+			transform: translateX(-100%);
+		}
 	}
 
 	.card-2 {
@@ -152,6 +165,26 @@
 		@media (max-width: 320px) {
 			width: 14rem;
 		}
+		@media (max-width: 1846px) {
+			left: 30rem
+		}
+		@media (max-width: 1645px) {
+			left: 24rem;
+		}
+		@media (max-width: 1450px) {
+			left: 22.4rem;
+		}
+		@media (max-width: 1392px) {
+			left: 20rem;
+		}
+		@media (max-width: 1250px) {
+			left: 18rem;
+		}
+		@media (max-width: 1212px) {
+			left: 50%;
+			transform: translateX(-100%);
+			top: 32rem;
+		}
 	}
 	.card-3 {
 		width: 21rem;
@@ -164,6 +197,19 @@
 
 		@media (max-width: 320px) {
 			width: 14rem;
+		}
+		@media (max-width: 1645px) {
+			right: 2rem;
+		}
+		@media (max-width: 1450px) {
+			right: 1rem;
+		}
+		@media (max-width: 1392px) {
+			right: 0.5rem
+		}
+		@media (max-width: 1212px) {
+			left: 50.5%;
+			top: 8rem;
 		}
 	}
 	.card-4 {
@@ -178,6 +224,22 @@
 		@media (max-width: 320px) {
 			width: 14rem;
 		}
+		@media (max-width: 1846px) {
+			right: 30rem
+		}
+		@media (max-width: 1645px) {
+			right: 24rem;
+		}
+		@media (max-width: 1450px) {
+			right: 22.4rem;
+		}
+		@media (max-width: 1392px) {
+			right: 19rem;
+		}
+		@media (max-width:1212px) {
+			left: 50.5%;
+			top: 38rem;
+		}
 	}
 	.card-5 {
 		width: 21rem;
@@ -191,6 +253,14 @@
 		@media (max-width: 320px) {
 			width: 14rem;
 		}
+		@media (max-width: 1392px) {
+			left: 10rem;
+		}
+		@media (max-width: 1212px) {
+			left: 50%;
+			transform: translateX(-100%);
+			top: 62rem;
+		}
 	}
 	.card-6 {
 		width: 21rem;
@@ -203,6 +273,13 @@
 
 		@media (max-width: 320px) {
 			width: 14rem;
+		}
+		@media (max-width: 1392px) {
+			right: 12rem;
+		}
+		@media (max-width: 1212px) {
+			left: 50.5%;
+			top: 68rem;
 		}
 	}
 </style>
