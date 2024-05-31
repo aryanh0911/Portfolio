@@ -13,6 +13,7 @@
 		heroCards.forEach((card) => {
 			card.addEventListener('mouseenter', () => {
 				gsap.to(card, { scale: 1.02, duration: 0.3 });
+				gsap.to('img', {scale: 0.8})
 			});
 
 			card.addEventListener('mouseleave', () => {
@@ -89,12 +90,12 @@
 
 <style>
 	#main-container {
-		display: grid;
-		place-content: center;
+		/* display: grid; */
+		/* place-content: center; */
 		/* width: 100vw; */
 		max-width: 2049px;
 		min-height: 200vh;
-		display: relative;
+		position: relative;
 		margin-left: auto;
 		margin-right: auto;
 		/* overflow: hidden; */
@@ -105,7 +106,7 @@
 		position: absolute;
 		z-index: 2;
 		left: 50%;
-		top: 50%;
+		top: 25%;
 		transform: translate(-50%, -50%);
 		mix-blend-mode: difference;
 	}
@@ -124,12 +125,10 @@
 		position: absolute;
 		background-color: black;
 		cursor: pointer;
-		/* transition: scale 0.2s ease-in-out; */
 	}
 
 	.card-1 {
-		width: 20.2rem;
-		/* background-color: cyan; */
+		width: 21rem;
 		background-image: url('$lib/assets/about-page/prog-pfp.gif');
 		background-size: cover;
 		position: absolute;
@@ -142,7 +141,7 @@
 	}
 
 	.card-2 {
-		width: 20.2rem;
+		width: 21rem;
 		position: absolute;
 		top: 24.3rem;
 		left: 36.5rem;
@@ -155,7 +154,7 @@
 		}
 	}
 	.card-3 {
-		width: 20.2rem;
+		width: 21rem;
 		position: absolute;
 		top: 3rem;
 		right: 8rem;
@@ -168,7 +167,7 @@
 		}
 	}
 	.card-4 {
-		width: 20.2rem;
+		width: 21rem;
 		position: absolute;
 		top: 14rem;
 		right: 36.5rem;
@@ -181,7 +180,7 @@
 		}
 	}
 	.card-5 {
-		width: 20.2rem;
+		width: 21rem;
 		position: absolute;
 		top: 53.3rem;
 		left: 18rem;
@@ -194,7 +193,7 @@
 		}
 	}
 	.card-6 {
-		width: 20.2rem;
+		width: 21rem;
 		position: absolute;
 		top: 44.3rem;
 		right: 18.5rem;
