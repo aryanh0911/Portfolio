@@ -12,12 +12,12 @@
 
 		heroCards.forEach((card) => {
 			card.addEventListener('mouseenter', () => {
-				gsap.to(card, { scale: 1.02, duration: 0.3 });
-				gsap.to('img', {scale: 0.8})
+				gsap.to(card, { scale: 1.02, duration: 0.3, zIndex: 2, });
+				
 			});
 
 			card.addEventListener('mouseleave', () => {
-				gsap.to(card, { scale: 1, duration: 0.3 });
+				gsap.to(card, { scale: 1, duration: 0.3, zIndex: 1 });
 			});
 		});
 
@@ -74,7 +74,7 @@
 <section class="">
 	<div id="main-container" class="">
 		<div id="header-text" class="">
-			<p class="text-white text-8xl"><span>W</span><span>O</span><span>R</span><span>K</span></p>
+			<p class=""><span>W</span><span>O</span><span>R</span><span>K</span></p>
 		</div>
 
 		<div class="floating-cards">
@@ -94,11 +94,15 @@
 		/* place-content: center; */
 		/* width: 100vw; */
 		max-width: 2049px;
-		min-height: 200vh;
+		min-height: 150vh;
 		position: relative;
 		margin-left: auto;
 		margin-right: auto;
 		/* overflow: hidden; */
+
+		@media (max-width: 690px) {
+			min-height: 120vh;
+		}
 	}
 
 	#header-text {
@@ -109,6 +113,11 @@
 		top: 25%;
 		transform: translate(-50%, -50%);
 		mix-blend-mode: difference;
+		color: white;
+		font-size: 5rem;
+		@media (max-width: 690px) {
+			font-size: 4rem;
+		}
 	}
 
 	#header-text p {
@@ -125,10 +134,16 @@
 		position: absolute;
 		background-color: black;
 		cursor: pointer;
+		width: 21rem;
+		box-shadow: 10px 10px 26px black;
+
+		@media (max-width: 690px) {
+			width: 12rem;
+		}
 	}
 
 	.card-1 {
-		width: 21rem;
+		/* width: 21rem; */
 		background-image: url('$lib/assets/about-page/prog-pfp.gif');
 		background-size: cover;
 		position: absolute;
@@ -151,10 +166,13 @@
 			left: 50%;
 			transform: translateX(-100%);
 		}
+		@media (max-width: 390px) {
+			left: 60%;
+		}
 	}
 
 	.card-2 {
-		width: 21rem;
+		/* width: 21rem; */
 		position: absolute;
 		top: 24.3rem;
 		left: 36.5rem;
@@ -185,9 +203,15 @@
 			transform: translateX(-100%);
 			top: 32rem;
 		}
+		@media (max-width: 690px) {
+			top: 19.5rem;
+		}
+		@media (max-width: 390px) {
+			left: 60%;
+		}
 	}
 	.card-3 {
-		width: 21rem;
+		/* width: 21rem; */
 		position: absolute;
 		top: 3rem;
 		right: 8rem;
@@ -211,9 +235,12 @@
 			left: 50.5%;
 			top: 8rem;
 		}
+		@media (max-width: 390px) {
+			left: 40%;
+		}
 	}
 	.card-4 {
-		width: 21rem;
+		/* width: 21rem; */
 		position: absolute;
 		top: 14rem;
 		right: 36.5rem;
@@ -240,9 +267,15 @@
 			left: 50.5%;
 			top: 38rem;
 		}
+		@media (max-width: 690px) {
+			top: 25.5rem;
+		}
+		@media (max-width: 390px) {
+			left: 40%;
+		}
 	}
 	.card-5 {
-		width: 21rem;
+		/* width: 21rem; */
 		position: absolute;
 		top: 53.3rem;
 		left: 18rem;
@@ -261,9 +294,15 @@
 			transform: translateX(-100%);
 			top: 62rem;
 		}
+		@media (max-width: 690px) {
+			top: 37rem;
+		}
+		@media (max-width: 390px) {
+			left: 60%;
+		}
 	}
 	.card-6 {
-		width: 21rem;
+		/* width: 21rem; */
 		position: absolute;
 		top: 44.3rem;
 		right: 18.5rem;
@@ -280,6 +319,12 @@
 		@media (max-width: 1212px) {
 			left: 50.5%;
 			top: 68rem;
+		}
+		@media (max-width: 690px) {
+			top: 43rem;
+		}
+		@media (max-width: 390px) {
+			left: 40%;
 		}
 	}
 </style>
