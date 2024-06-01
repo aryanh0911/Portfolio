@@ -8,65 +8,93 @@
 
 	// ---GSAP---
 	onMount(() => {
-		const heroCards = document.querySelectorAll('.card');
-
-		heroCards.forEach((card) => {
-			card.addEventListener('mouseenter', () => {
-				gsap.to(card, { scale: 1.02, duration: 0.3, zIndex: 2 });
-			});
-
-			card.addEventListener('mouseleave', () => {
-				gsap.to(card, { scale: 1, duration: 0.3, zIndex: 1 });
-			});
-		});
-
-		const tl = gsap.timeline({
-			onStart: () => {
-				gsap.set('#header-text, #header-text p span, .floating-cards .card', {
-					visibility: 'visible'
-				});
-			}
-		});
-		tl.from('#header-text p span', {
-			opacity: 0,
-			y: 32,
-			duration: 1.5,
-			stagger: 0.04,
-			ease: 'power3.out'
-		}).from(
-			'.floating-cards .card',
+		let mm = gsap.matchMedia();
+		mm.add(
 			{
-				opacity: 0,
-				y: gsap.utils.random(100, 50),
-				stagger: 0.1
+				isDesktop: '',
+				isTablet: '(max-width: 1212px)',
+				isMobile: ''
 			},
-			1
-		);
+			(context) => {
+				let { isDesktop, isTablet, isMobile } = context.conditions;
+				const heroCards = document.querySelectorAll('.card');
 
-		heroCards.forEach((card) => {
-			tl.to(card, {
-				y: gsap.utils.random(-5.5, -5),
-				stagger: 0.1,
-				repeat: -1,
-				yoyo: true,
-				duration: 2
-			});
-		});
+				heroCards.forEach((card) => {
+					card.addEventListener('mouseenter', () => {
+						gsap.to(card, { scale: 1.02, duration: 0.3, zIndex: 2 });
+					});
 
-		heroCards.forEach((card) => {
-			tl.to(card, {
-				yPercent: gsap.utils.random(-200, -50),
-				ease: 'none',
-				scrollTrigger: {
-					trigger: '#main-container',
-					start: 'top top',
-					end: 'bottom top',
-					scrub: true,
-					ease: 'none'
-					// markers: true
+					card.addEventListener('mouseleave', () => {
+						gsap.to(card, { scale: 1, duration: 0.3, zIndex: 1 });
+					});
+				});
+
+				const tl = gsap.timeline({
+					onStart: () => {
+						gsap.set('#header-text, #header-text p span, .floating-cards .card', {
+							visibility: 'visible'
+						});
+					}
+				});
+				tl.from('#header-text p span', {
+					opacity: 0,
+					y: 32,
+					duration: 1.5,
+					stagger: 0.04,
+					ease: 'power3.out'
+				}).from(
+					'.floating-cards .card',
+					{
+						opacity: 0,
+						y: gsap.utils.random(100, 50),
+						stagger: 0.1
+					},
+					1
+				);
+
+				heroCards.forEach((card) => {
+					tl.to(card, {
+						y: gsap.utils.random(-5.5, -5),
+						stagger: 0.1,
+						repeat: -1,
+						yoyo: true,
+						duration: 2
+					});
+				});
+
+				if (isTablet) {
+					heroCards.forEach((card) => {
+						tl.to(card, {
+							yPercent: gsap.utils.random(-10, -25),
+							ease: 'none',
+							scrollTrigger: {
+								trigger: '#main-container',
+								start: 'top top',
+								end: 'bottom top',
+								scrub: true,
+								ease: 'none'
+								// markers: true
+							}
+						});
+					});
+				} else {
+					heroCards.forEach((card) => {
+						tl.to(card, {
+							yPercent: gsap.utils.random(-200, -50),
+							ease: 'none',
+							scrollTrigger: {
+								trigger: '#main-container',
+								start: 'top top',
+								end: 'bottom top',
+								scrub: true,
+								ease: 'none'
+								// markers: true
+							}
+						});
+					});
 				}
-			});
-		});
+			}
+		);
 	});
 </script>
 
@@ -77,12 +105,17 @@
 		</div>
 
 		<div class="floating-cards">
-			<div class="card-1 card rounded-md"></div>
-			<div class="card-2 card rounded-md"></div>
-			<div class="card-3 card rounded-md"></div>
-			<div class="card-4 card rounded-md"></div>
-			<div class="card-5 card rounded-md"></div>
-			<div class="card-6 card rounded-md"></div>
+			<div class="first-col-wrapper">
+				<div class="card-1 card rounded-md"><p class="text-white">Card-1</p></div>
+				<div class="card-3 card rounded-md"><p class="text-white">Card-3</p></div>
+				<div class="card-5 card rounded-md"><p class="text-white">Card-5</p></div>
+			</div>
+
+			<div class="second-col-wrapper">
+				<div class="card-2 card rounded-md"><p class="text-white">Card-2</p></div>
+				<div class="card-4 card rounded-md"><p class="text-white">Card-4</p></div>
+				<div class="card-6 card rounded-md"><p class="text-white">Card-6</p></div>
+			</div>
 		</div>
 	</div>
 </section>
@@ -132,6 +165,10 @@
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			place-content: center;
+			column-gap: 0.3rem;
+		}
+		@media (max-width: 390px) {
+			column-gap: 0;
 		}
 	}
 
@@ -146,24 +183,41 @@
 			position: absolute;
 		}
 
-		@media (screen) {
-		}
 		@media (max-width: 690px) {
 			width: 12rem;
+		}
+		@media (max-width: 390px) {
+			width: 10rem;
+		}
+	}
+
+	.first-col-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.second-col-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		margin-top: 21rem;
+
+		@media (max-width: 690px) {
+			margin-top: 13rem;
+		}
+		@media (max-width: 390px) {
+			margin-top: 10rem;
 		}
 	}
 
 	.card-1 {
-		/* width: 21rem; */
 		background-image: url('$lib/assets/about-page/prog-pfp.gif');
 		background-size: cover;
 		/* position: absolute; */
 		top: 2rem;
 		left: 8rem;
 
-		/* @media (max-width: 320px) {
-			width: 14rem;
-		} */
 		@media (max-width: 1645px) {
 			left: 2rem;
 		}
@@ -173,27 +227,15 @@
 		@media (max-width: 1392px) {
 			left: 0.5rem;
 		}
-		/* @media (max-width: 1212px) {
-			left: 50%;
-			transform: translateX(-100%);
-		}
-		@media (max-width: 390px) {
-			left: 60%;
-		} */
 	}
 
 	.card-2 {
-		/* width: 21rem; */
-		/* position: absolute; */
 		top: 24.3rem;
 		left: 36.5rem;
 		background-image: url('https://cdn.vox-cdn.com/thumbor/2Af_v_XrHTP-UweyZnkg5B_fC2o=/245x0:1311x600/1600x900/cdn.vox-cdn.com/uploads/chorus_image/image/50875545/no_mans_sky_art.0.0.jpg');
 		background-size: cover;
 		background-position: center;
 
-		/* @media (max-width: 320px) {
-			width: 14rem;
-		} */
 		@media (max-width: 1846px) {
 			left: 30rem;
 		}
@@ -209,30 +251,14 @@
 		@media (max-width: 1250px) {
 			left: 18rem;
 		}
-		/* @media (max-width: 1212px) {
-			left: 50%;
-			transform: translateX(-100%);
-			top: 32rem;
-		}
-		@media (max-width: 690px) {
-			top: 19.5rem;
-		}
-		@media (max-width: 390px) {
-			left: 60%;
-		} */
 	}
 	.card-3 {
-		/* width: 21rem; */
-		/* position: absolute; */
 		top: 3rem;
 		right: 8rem;
 		background-image: url('https://mixed-news.com/en/wp-content/uploads/2023/08/No-Mans-Sky-Echoes.jpg');
 		background-size: cover;
 		background-position: center;
 
-		/* @media (max-width: 320px) {
-			width: 14rem;
-		} */
 		@media (max-width: 1645px) {
 			right: 2rem;
 		}
@@ -242,26 +268,14 @@
 		@media (max-width: 1392px) {
 			right: 0.5rem;
 		}
-		/* @media (max-width: 1212px) {
-			left: 50.5%;
-			top: 8rem;
-		}
-		@media (max-width: 390px) {
-			left: 40%;
-		} */
 	}
 	.card-4 {
-		/* width: 21rem; */
-		/* position: absolute; */
 		top: 14rem;
 		right: 36.5rem;
 		background-image: url('https://assets1.ignimgs.com/2019/08/14/no-mans-sky---beyond-version---button-1565744905061.jpg');
 		background-size: cover;
 		background-position: center;
 
-		/* @media (max-width: 320px) {
-			width: 14rem;
-		} */
 		@media (max-width: 1846px) {
 			right: 30rem;
 		}
@@ -274,68 +288,27 @@
 		@media (max-width: 1392px) {
 			right: 19rem;
 		}
-		/* @media (max-width:1212px) {
-			left: 50.5%;
-			top: 38rem;
-		}
-		@media (max-width: 690px) {
-			top: 25.5rem;
-		}
-		@media (max-width: 390px) {
-			left: 40%;
-		} */
 	}
 	.card-5 {
-		/* width: 21rem; */
-		/* position: absolute; */
 		top: 53.3rem;
 		left: 18rem;
 		background-image: url('https://xxboxnews.blob.core.windows.net/prod/sites/2/2023/06/Saga-6e7883abba45ec557821.jpg');
 		background-size: cover;
 		background-position: center;
 
-		/* @media (max-width: 320px) {
-			width: 14rem;
-		} */
 		@media (max-width: 1392px) {
 			left: 10rem;
 		}
-		/* @media (max-width: 1212px) {
-			left: 50%;
-			transform: translateX(-100%);
-			top: 62rem;
-		}
-		@media (max-width: 690px) {
-			top: 37rem;
-		}
-		@media (max-width: 390px) {
-			left: 60%;
-		} */
 	}
 	.card-6 {
-		/* width: 21rem; */
-		/* position: absolute; */
 		top: 44.3rem;
 		right: 18.5rem;
 		background-image: url('https://images.alphacoders.com/136/1360645.jpeg');
 		background-size: cover;
 		background-position: center;
-		/* 
-		@media (max-width: 320px) {
-			width: 14rem;
-		} */
+
 		@media (max-width: 1392px) {
 			right: 12rem;
 		}
-		/* @media (max-width: 1212px) {
-			left: 50.5%;
-			top: 68rem;
-		}
-		@media (max-width: 690px) {
-			top: 43rem;
-		}
-		@media (max-width: 390px) {
-			left: 40%;
-		} */
 	}
 </style>
