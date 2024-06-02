@@ -20,6 +20,10 @@
 				<div class="description mt-2">
 					<p class="text-[#d2dbe6]">Collaborated with a team of UI/UX designers and Developers to build the official site of Oikyotaan 2024</p>
 				</div>
+
+				<div class="repo-url">
+					<p class="text-[#d2dbe6] font-bold mt-2">Repository: </p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -198,13 +202,11 @@
 		height: 62%;
 	}
 
-
-
 	.text-box-overlay {
 		position: absolute;
 		inset: 0;
 		z-index: -1;
-		background-color: rgba(65, 65, 65, 0.324);
+		background-color: rgba(65, 65, 65, 0.283);
 		backdrop-filter: blur(8px);
 	}
 </style>
