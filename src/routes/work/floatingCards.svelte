@@ -1,5 +1,5 @@
 <script>
-	import FloatingCardData from './floatingCardData.json';
+	import FloatingCardData from './floatingCardData.js';
 	import Card from './card.svelte';
 </script>
 
