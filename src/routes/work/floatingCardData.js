@@ -27,28 +27,49 @@ const floatingCards = [
         id: 3,
         generalClass: "card",
         cardNoClass: "card-3",
-        projectName: "Machine Learning Club",
-        date: "",
-        projectImage: "",
+        projectName: "ML Club",
+        date: "May, 2024",
+        projectImage: "$lib/assets/work-page/ml-club.png",
         repoURL: "",
         URL: "",
-        description: "",
+        description: "Designed and Developed the official website for Machine Learning Club NIT Silchar",
         techStack: ['SvelteKit', 'Tailwind', 'Firebase']
     },
     {
         id: 4,
         generalClass: "card",
-        cardNoClass: "card-4"
+        cardNoClass: "card-4",
+        projectName: "GDSC Explore'24",
+        date: "May, 2024",
+        projectImage: "$lib/assets/work-page/gdsc-explore.png",
+        repoURL: "",
+        URL: "",
+        description: "Designed and Developed the official website for Machine Learning Club NIT Silchar",
+        techStack: ['SvelteKit', 'Tailwind', 'Firebase']
     },
     {
         id: 5,
         generalClass: "card",
-        cardNoClass: "card-5"
+        cardNoClass: "card-5",
+        projectName: "Github Search",
+        date: "May, 2024",
+        projectImage: "$lib/assets/work-page/github-search.png",
+        repoURL: "",
+        URL: "",
+        description: "Designed and Developed the official website for Machine Learning Club NIT Silchar",
+        techStack: ['SvelteKit', 'Tailwind', 'Firebase']
     },
     {
         id: 6,
         generalClass: "card",
-        cardNoClass: "card-6"
+        cardNoClass: "card-6",
+        projectName: "Pomodoro",
+        date: "May, 2024",
+        projectImage: "$lib/assets/work-page/pomodoro.png",
+        repoURL: "",
+        URL: "",
+        description: "Designed and Developed the official website for Machine Learning Club NIT Silchar",
+        techStack: ['SvelteKit', 'Tailwind', 'Firebase']
     }
 ];
 

@@ -1,6 +1,7 @@
 <script>
-	export let cardNoClass, generalClass;
+	export let cardNoClass, generalClass, techStack;
 	import image from '$lib/assets/work-page/oikyotaan.png';
+	// import FloatingCardData from './floatingCardData'
 </script>
 
 <div class="{cardNoClass} {generalClass} card rounded-md">
@@ -14,7 +15,11 @@
 			<div class="text-box-overlay"></div>
 			<div class="text-box w-[100%] p-2 flex flex-col">
 				<div class="title">
-					<p class="text-[#e2e8f0] text-[1.6rem] font-bold">Oikyotaan'24</p>
+					<p class="text-[#e8edf3] font-bold">Oikyotaan'24</p>
+				</div>
+
+				<div class="date text-[#d2dbe689]">
+					<p>March, 2024</p>
 				</div>
 
 				<div class="description mt-2">
@@ -22,7 +27,15 @@
 				</div>
 
 				<div class="repo-url">
-					<p class="text-[#d2dbe6] font-bold mt-2">Repository: </p>
+					<p class="text-[#d2dbe6] font-bold">Repository: </p>
+				</div>
+
+				<div class="techstack flex flex-wrap gap-1">
+					{#each techStack as tech}
+						<div class="flex justify-center items-center py-1 px-2 rounded-2xl bg-[#E3FEF7]  text-[#135D66] opacity-[0.6]">
+							{tech}
+						</div>
+					{/each}
 				</div>
 			</div>
 		</div>
@@ -177,7 +190,7 @@
 		inset: 0;
 		z-index: 1;
 		width: 120%;
-		background-color: rgba(0, 0, 0, 0.32);
+		background-color: rgba(0, 0, 0, 0.194);
 	}
 
 	.card-image {
@@ -195,6 +208,14 @@
 	}
 
 	.text-wrapper {
+		@media (max-width: 690px) {
+			top: 14%;
+			height: 83%;
+		}
+		@media (max-width: 390px) {
+			top: 5%;
+			height: 91%;
+		}
 		top: 35%;
 		left: 50%;
 		transform: translateX(-50%);
@@ -208,5 +229,42 @@
 		z-index: -1;
 		background-color: rgba(65, 65, 65, 0.283);
 		backdrop-filter: blur(8px);
+	}
+
+	.title p {
+		@media (max-width: 690px) {
+			font-size: 1.2rem;
+		}
+		font-size: 1.6rem;
+	}
+
+	.description p, .date p, .repo-url p {
+		@media (max-width: 690px) {
+			font-size: 0.7rem;
+		}
+	}
+
+	.description p {
+		line-height: 1.18;
+	}
+
+	.repo-url {
+		@media (max-width: 390px) {
+			margin-top: 0.2rem;
+		}
+		
+		margin-top: 0.5rem;
+	}
+
+	.techstack {
+		@media (max-width: 690px) {
+			font-size: 0.5rem;
+		}
+		@media (max-width: 390px) {
+			gap: 0;
+			margin-top: 0.2rem;
+		}
+		font-size: 0.75rem;
+		margin-top: 0.85rem;
 	}
 </style>
