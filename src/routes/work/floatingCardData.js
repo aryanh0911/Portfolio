@@ -76,7 +76,7 @@ const floatingCards = [
         projectImage: pomodoroImage,
         repoURL: "",
         URL: "",
-        description: "Designed and Developed the official website for Machine Learning Club NIT Silchar",
+        description: "Designed and developed a simple Pomodoro timer. Implemented a Dark-mode toggle using Tailwind.",
         techStack: ['SvelteKit', 'Tailwind', 'Firebase']
     }
 ];

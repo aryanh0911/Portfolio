@@ -1,5 +1,5 @@
 <script>
-	export let cardNoClass, generalClass, techStack, projectImage, projectName,date, description ;
+	export let cardNoClass, generalClass, techStack, projectImage, projectName, date, description;
 	// import image from '$lib/assets/work-page/oikyotaan.png';
 	// import FloatingCardData from './floatingCardData'
 </script>
@@ -27,12 +27,14 @@
 				</div>
 
 				<div class="repo-url">
-					<p class="text-[#d2dbe6] font-bold">Repository: </p>
+					<p class="text-[#d2dbe6] font-bold">Repository:</p>
 				</div>
 
 				<div class="techstack flex flex-wrap gap-1">
 					{#each techStack as tech}
-						<div class="flex justify-center items-center py-1 px-2 rounded-2xl bg-[#E3FEF7]  text-[#135D66] opacity-[0.6]">
+						<div
+							class="flex justify-center items-center py-1 px-2 rounded-2xl bg-[#E3FEF7] text-[#135D66] opacity-[0.6]"
+						>
 							{tech}
 						</div>
 					{/each}
@@ -51,7 +53,7 @@
 		width: 21rem;
 		box-shadow: 10px 10px 26px black;
 		overflow: hidden;
-		/* position: relative; */  /* adding relative here ruins the whole grid layout below 1212px */
+		/* position: relative; */ /* adding relative here ruins the whole grid layout below 1212px */
 		@media (min-width: 1212px) {
 			position: absolute;
 		}
@@ -71,7 +73,7 @@
 		/* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.279), rgba(0, 0, 0, 0.279)), url($lib/assets/work-page/oikyotaan.png);
         background-size: cover;
         background-position: center; */
-		@media (min-width: 1212px) {			
+		@media (min-width: 1212px) {
 			top: 2rem;
 			left: 8rem;
 		}
@@ -91,7 +93,7 @@
 		/* background-image: url('https://cdn.vox-cdn.com/thumbor/2Af_v_XrHTP-UweyZnkg5B_fC2o=/245x0:1311x600/1600x900/cdn.vox-cdn.com/uploads/chorus_image/image/50875545/no_mans_sky_art.0.0.jpg'); */
 		/* background-size: cover; */
 		/* background-position: center; */
-		@media (min-width: 1212px) {			
+		@media (min-width: 1212px) {
 			top: 24.3rem;
 			left: 36.5rem;
 		}
@@ -116,7 +118,7 @@
 		/* background-image: url('https://mixed-news.com/en/wp-content/uploads/2023/08/No-Mans-Sky-Echoes.jpg'); */
 		/* background-size: cover; */
 		/* background-position: center; */
-		@media (min-width: 1212px) {			
+		@media (min-width: 1212px) {
 			top: 3rem;
 			right: 8rem;
 		}
@@ -135,7 +137,7 @@
 		/* background-image: url('https://assets1.ignimgs.com/2019/08/14/no-mans-sky---beyond-version---button-1565744905061.jpg'); */
 		/* background-size: cover; */
 		/* background-position: center; */
-		@media (min-width: 1212px) {			
+		@media (min-width: 1212px) {
 			top: 14rem;
 			right: 36.5rem;
 		}
@@ -157,7 +159,7 @@
 		/* background-image: url('https://xxboxnews.blob.core.windows.net/prod/sites/2/2023/06/Saga-6e7883abba45ec557821.jpg'); */
 		background-size: cover;
 		background-position: center;
-		@media (min-width: 1212px) {			
+		@media (min-width: 1212px) {
 			top: 53.3rem;
 			left: 18rem;
 		}
@@ -170,7 +172,7 @@
 		/* background-image: url('https://images.alphacoders.com/136/1360645.jpeg'); */
 		/* background-size: cover; */
 		/* background-position: center; */
-		@media (min-width: 1212px) {			
+		@media (min-width: 1212px) {
 			top: 44.3rem;
 			right: 18.5rem;
 		}
@@ -194,7 +196,7 @@
 	}
 
 	.card-image {
-        scale: 1.2;
+		scale: 1.2;
 		position: absolute;
 		inset: 0;
 		object-fit: cover;
@@ -238,7 +240,9 @@
 		font-size: 1.6rem;
 	}
 
-	.description p, .date p, .repo-url p {
+	.description p,
+	.date p,
+	.repo-url p {
 		@media (max-width: 690px) {
 			font-size: 0.7rem;
 		}
@@ -252,7 +256,7 @@
 		@media (max-width: 390px) {
 			margin-top: 0.2rem;
 		}
-		
+
 		margin-top: 0.5rem;
 	}
 
