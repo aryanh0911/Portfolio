@@ -1,6 +1,6 @@
 <script>
-	export let cardNoClass, generalClass, techStack;
-	import image from '$lib/assets/work-page/oikyotaan.png';
+	export let cardNoClass, generalClass, techStack, projectImage, projectName,date, description ;
+	// import image from '$lib/assets/work-page/oikyotaan.png';
 	// import FloatingCardData from './floatingCardData'
 </script>
 
@@ -9,21 +9,21 @@
 
 	<div class="card-image-container relative">
 		<div class="image-overlay"></div>
-		<img class="card-image" src={image} alt="" />
+		<img class="card-image" src={projectImage} alt="anything" />
 
 		<div class="text-wrapper absolute z-10 w-[95%] rounded-md">
 			<div class="text-box-overlay"></div>
 			<div class="text-box w-[100%] p-2 flex flex-col">
 				<div class="title">
-					<p class="text-[#e8edf3] font-bold">Oikyotaan'24</p>
+					<p class="text-[#e8edf3] font-bold">{projectName}</p>
 				</div>
 
 				<div class="date text-[#d2dbe689]">
-					<p>March, 2024</p>
+					<p>{date}</p>
 				</div>
 
 				<div class="description mt-2">
-					<p class="text-[#d2dbe6]">Collaborated with a team of UI/UX designers and Developers to build the official site of Oikyotaan 2024</p>
+					<p class="text-[#d2dbe6]">{description}</p>
 				</div>
 
 				<div class="repo-url">
@@ -190,7 +190,7 @@
 		inset: 0;
 		z-index: 1;
 		width: 120%;
-		background-color: rgba(0, 0, 0, 0.194);
+		background-color: rgba(0, 0, 0, 0.4);
 	}
 
 	.card-image {

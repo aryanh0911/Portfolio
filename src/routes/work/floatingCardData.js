@@ -1,3 +1,11 @@
+import oikyotaanImage from '$lib/assets/work-page/oikyotaan.png';
+import mlClubImage from '$lib/assets/work-page/ml-club.png';
+import gdscExploreImage from '$lib/assets/work-page/gdsc-explore.png';
+import githubSearchImage from '$lib/assets/work-page/github-search.png';
+import pomodoroImage from '$lib/assets/work-page/pomodoro.png';
+
+
+
 const floatingCards = [
     {
         id: 1,
@@ -5,7 +13,7 @@ const floatingCards = [
         cardNoClass: "card-1",
         projectName: "Portfolio",
         date: "May-2024",
-        projectImage: "",
+        projectImage: oikyotaanImage,
         repoURL: "",
         URL: "",
         description: "",
@@ -17,7 +25,7 @@ const floatingCards = [
         cardNoClass: "card-2",
         projectName: "Oikyotaan'24",
         date: "March-2024",
-        projectImage: "$lib/assets/work-page/oikyotaan.png",
+        projectImage: oikyotaanImage,
         repoURL: "",
         URL: "",
         description: "Collaborated with a team of UI/UX Designers and Developers to build the official site of Oikyotaan 2024.",
@@ -29,7 +37,7 @@ const floatingCards = [
         cardNoClass: "card-3",
         projectName: "ML Club",
         date: "May, 2024",
-        projectImage: "$lib/assets/work-page/ml-club.png",
+        projectImage: mlClubImage,
         repoURL: "",
         URL: "",
         description: "Designed and Developed the official website for Machine Learning Club NIT Silchar",
@@ -41,7 +49,7 @@ const floatingCards = [
         cardNoClass: "card-4",
         projectName: "GDSC Explore'24",
         date: "May, 2024",
-        projectImage: "$lib/assets/work-page/gdsc-explore.png",
+        projectImage: gdscExploreImage,
         repoURL: "",
         URL: "",
         description: "Designed and Developed the official website for Machine Learning Club NIT Silchar",
@@ -53,7 +61,7 @@ const floatingCards = [
         cardNoClass: "card-5",
         projectName: "Github Search",
         date: "May, 2024",
-        projectImage: "$lib/assets/work-page/github-search.png",
+        projectImage: githubSearchImage,
         repoURL: "",
         URL: "",
         description: "Designed and Developed the official website for Machine Learning Club NIT Silchar",
@@ -65,7 +73,7 @@ const floatingCards = [
         cardNoClass: "card-6",
         projectName: "Pomodoro",
         date: "May, 2024",
-        projectImage: "$lib/assets/work-page/pomodoro.png",
+        projectImage: pomodoroImage,
         repoURL: "",
         URL: "",
         description: "Designed and Developed the official website for Machine Learning Club NIT Silchar",

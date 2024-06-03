@@ -7,7 +7,7 @@
 	<div class="first-col-wrapper">
 		{#each FloatingCardData as data}
 			{#if data.id % 2 !== 0}
-				<Card cardNoClass={data.cardNoClass} generalClass={data.generalClass} techStack={data.techStack} />
+				<Card cardNoClass={data.cardNoClass} generalClass={data.generalClass} projectImage={data.projectImage} projectName={data.projectName} date={data.date} description={data.description} techStack={data.techStack} />
 			{/if}
 		{/each}
 	</div>
@@ -15,7 +15,7 @@
 	<div class="second-col-wrapper">
 		{#each FloatingCardData as data}
 			{#if data.id % 2 === 0}
-				<Card cardNoClass={data.cardNoClass} generalClass={data.generalClass} techStack={data.techStack} />
+				<Card cardNoClass={data.cardNoClass} generalClass={data.generalClass} projectImage={data.projectImage} projectName={data.projectName} date={data.date} description={data.description} techStack={data.techStack} />
 			{/if}
 		{/each}
 	</div>
