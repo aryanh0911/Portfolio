@@ -1,11 +1,8 @@
 <script>
 	export let cardNoClass, generalClass, techStack, projectImage, projectName, date, description;
-	// import image from '$lib/assets/work-page/oikyotaan.png';
-	// import FloatingCardData from './floatingCardData'
 </script>
 
 <div class="{cardNoClass} {generalClass} card rounded-md">
-	<!-- <p class="text-white">Card-1</p> -->
 
 	<div class="card-image-container relative">
 		<div class="image-overlay"></div>
