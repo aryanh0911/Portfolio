@@ -1,23 +1,68 @@
-<!-- <h3 class="text-white">contacts page/</h3> -->
 <script>
-    
+	import { db, realtimeDb } from '$lib/firebase.js';
+	import { collection, addDoc } from 'firebase/firestore';
+	import { ref, set } from 'firebase/database';
+
+	let name = '';
+	let email = '';
+	let msgContent = '';
+	let showAlert = false;
+
+	async function handleSubmit(event) {
+		event.preventDefault();
+
+		// Save to Firestore
+		try {
+			const docRef = await addDoc(collection(db, 'contacts'), {
+				name,
+				email,
+				message: msgContent,
+                timestamp: new Date()
+			});
+			console.log('Document written with ID: ', docRef.id);
+		} catch (e) {
+			console.error('Error adding document: ', e);
+		}
+
+		// Save to Realtime Database
+		try {
+			const dbRef = ref(realtimeDb, 'contacts/' + Date.now());
+			await set(dbRef, {
+				name,
+				email,
+				message: msgContent,
+                timestamp: new Date()
+			});
+			console.log('Data written to Realtime Database');
+		} catch (e) {
+			console.error('Error writing to Realtime Database: ', e);
+		}
+
+		showAlert = true;
+		setTimeout(() => (showAlert = false), 3000);
+
+		// Clear form
+		name = '';
+		email = '';
+		msgContent = '';
+	}
 </script>
 
 <div class="main">
 	<div class="container">
-		<form action="" id="contactForm">
-			<div class="alert">Your message sent</div>
+		<form on:submit|preventDefault={handleSubmit}>
+			<div class:alert={showAlert}>Your message sent</div>
 
 			<div class="inputBox">
-				<input type="text" id="name" placeholder="Your name...." />
+				<input type="text" bind:value={name} placeholder="Your name...." />
 			</div>
 
 			<div class="inputBox">
-				<input type="email" id="emailid" placeholder="Your Email....." />
+				<input type="email" bind:value={email} placeholder="Your Email....." />
 			</div>
 
 			<div class="inputBox">
-				<textarea id="msgContent" cols="30" rows="10" placeholder="Message"></textarea>
+				<textarea bind:value={msgContent} cols="30" rows="10" placeholder="Message"></textarea>
 			</div>
 
 			<div class="inputBox">
