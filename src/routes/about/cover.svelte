@@ -17,7 +17,7 @@
 			>
 		</div>
 
-		<div id="pfp" class="absolute right-[30%] top-[50%] md:right-[20%] md:top-[50%] lg:top-[65%]">
+		<div id="pfp" class="">
 			<img id="pfp-img" src={pfp1} alt="" class="" />
 		</div>
 	</div>
@@ -30,6 +30,21 @@
 		background-size: cover;
 		position: relative;
 		visibility: hidden;
+	}
+
+	#pfp {
+		width: fit-content;
+		position: absolute;
+		top: 50%;
+		right: 20%;
+		@media (max-width: 768px) {
+			top: 95%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		@media (min-width: 1024px) {
+			top: 66%
+		}
 	}
 
 	#pfp img {
