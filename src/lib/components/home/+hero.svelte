@@ -1,4 +1,10 @@
 <script>
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	import { onMount } from 'svelte';
+	gsap.registerPlugin(ScrollTrigger);
+
+	// Components
 	import Charizard from './charizard-card.svelte';
 	import Bulbasaur from './bulbasaur-card.svelte';
 	import Mewtwo from './mewtwo-card.svelte';
@@ -10,12 +16,12 @@
 	let mewtwoCardHovered = false;
 	let lugiaCardHovered = false;
 
-	import { fade } from 'svelte/transition';
-	let pageTransition = 0;
+	// import { fade } from 'svelte/transition';
+	// let pageTransition = 0;
 
 	function navToAbout() {
 		window.location.href = '/about';
-		pageTransition = !pageTransition;
+		// pageTransition = !pageTransition;
 	}
 
 	function navToContact() {
@@ -25,10 +31,98 @@
 	function navToWork() {
 		window.location.href = '/work';
 	}
+
+	// GSAP
+	onMount(() => {
+		gsap.set('*', { visibility: 'visible' });
+		let mm = gsap.matchMedia();
+		mm.add(
+			{
+				isDesktop: '',
+				isTablet: '(max-width: 790px)',
+				isMobile: ''
+			},
+			(context) => {
+				let { isDesktop, isTablet, isMobile } = context.conditions;
+
+				if (isTablet) {
+					const tl = gsap.timeline({
+						onStart: () => {}
+					});
+
+					//---Big Cards---
+					gsap.to('#card-1', {
+						x: '-75%',
+						y: '16%',
+						rotate: -24,
+						duration: 0.2,
+						delay: 0.5
+					})
+					gsap.to('#card-2', {
+						x: '-2%',
+						y: '0%',
+						rotate: 3,
+						duration: 0.2,
+						delay: 0.5
+					})
+					gsap.to('#card-3', {
+						x: '75%',
+						y: '16%',
+						rotate: 24,
+						duration: 0.2,
+						delay: 0.5
+					})
+
+					//---Small Cards---
+					gsap.fromTo('#charizard',{opacity: 0}, {
+						opacity: .7,
+						x: '240%',
+						y: '-180%',
+						rotate: -15,
+						duration: 0.15,
+						delay: 1.2,
+					})
+					gsap.fromTo('#bulbasaur',{opacity: 0}, {
+						opacity: 0.7,
+						x: '200%',
+						y: '180%',
+						rotate: 15,
+						duration: 0.2,
+						delay: 1.2,
+						zIndex: 2
+					})
+					gsap.fromTo('#mewtwo',{opacity: 0}, {
+						opacity: 0.7,
+						x: '-320%',
+						y: '-180%',
+						rotate: 15,
+						duration: 0.15,
+						delay: 1.2,
+						zIndex: 1
+					})
+					gsap.fromTo('#lugia',{opacity: 0}, {
+						opacity: 0.7,
+						x: '-320%',
+						y: '180%',
+						rotate: -15,
+						duration: 0.15,
+						delay: 1.2,
+						zIndex: -2
+					})
+
+					//---Card-contents---
+					tl.to('.card-text', {
+						opacity: 1,
+						stagger: 0.12
+					}, 0.5)
+				}
+			}
+		);
+	});
 </script>
 
 <section>
-	<div class="flex justify-center items-center min-h-screen">
+	<div id="container" class="">
 		<div
 			class="card-group"
 			on:mouseover={() => (cardGroupHovered = true)}
@@ -63,7 +157,7 @@
 
 			<div id="card-2" class="big-card card" on:click={navToAbout}>
 				<div class="card-text">
-					<p>About Me</p>
+					<p>About</p>
 				</div>
 			</div>
 
@@ -84,10 +178,27 @@
 </section>
 
 <style>
-	.card-group {
+	* {
+		visibility: hidden;
+	}
+
+	#container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
 		position: relative;
+		/* overflow: hidden; */
+	}
+
+	.card-group {
+		position: absolute;
+		width: 34vmin;
 		aspect-ratio: 5/7;
-		width: 30vmin;
+		top: 45%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		/* visibility: hidden; */
 	}
 
 	.card {
@@ -103,7 +214,7 @@
 	}
 
 	.big-card {
-		width: 30vmin;
+		width: 34vmin;
 		border-radius: 1vmin;
 	}
 

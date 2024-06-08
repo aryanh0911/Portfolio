@@ -4,12 +4,12 @@
 </script>
 
 <div
-	id="mewtwo"
+	id="lugia"
 	class="{cardGroupHovered ? 'card-group-hovered' : ''} {lugiaCardHovered ? 'card-hovered' : ''}"
 ></div>
 
 <style>
-	#mewtwo {
+	#lugia {
 		width: 12vmin;
 		position: absolute;
 		top: 50%;

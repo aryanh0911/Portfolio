@@ -91,7 +91,7 @@
 		justify-content: space-evenly;
 		align-items: center;
 		flex-direction: column;
-		background-color: black;
+		/* background-color: black; */
 	}
 
 	.container form {
@@ -168,5 +168,8 @@
 		font-size: 18px;
 		font-weight: 900;
 		display: none;
+		color: white;
+		z-index: 10;
 	}
+
 </style>

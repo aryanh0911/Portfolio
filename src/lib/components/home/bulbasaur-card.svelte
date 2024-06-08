@@ -7,10 +7,10 @@
 	id="bulbasaur"
 	class="{cardGroupHovered ? 'card-group-hovered' : ''} {bulbasaurCardHovered
 		? 'card-hovered'
-		: ''}"
+		: ''} small-card"
 ></div>
 
-<style>
+<style>	
 	#bulbasaur {
 		width: 12vmin;
 		position: absolute;
