@@ -1,8 +1,9 @@
-import oikyotaanImage from '$lib/assets/work-page/oikyotaan.png';
-import mlClubImage from '$lib/assets/work-page/ml-club.png';
-import gdscExploreImage from '$lib/assets/work-page/gdsc-explore.png';
-import githubSearchImage from '$lib/assets/work-page/github-search.png';
-import pomodoroImage from '$lib/assets/work-page/pomodoro.png';
+import oikyotaanImage from '$lib/assets/work-page/oikyotaan_vertical.jpeg';
+import mlClubImage from '$lib/assets/work-page/mlclub_vertical.jpeg';
+import gdscExploreImage from '$lib/assets/work-page/gdscexplore_vertical.jpeg';
+import githubSearchImage from '$lib/assets/work-page/githubsearch_vertical 1.jpg';
+import pomodoroImage from '$lib/assets/work-page/pomodoro_vertical.jpeg';
+import portfolioImage from '$lib/assets/work-page/portfolio.png'
 
 
 
@@ -13,11 +14,11 @@ const floatingCards = [
         cardNoClass: "card-1",
         projectName: "Portfolio",
         date: "May-2024",
-        projectImage: oikyotaanImage,
+        projectImage: portfolioImage,
         repoURL: "",
         URL: "",
-        description: "",
-        techStack: ['SvelteKit', 'Tailwind', 'Firebase']
+        description: "Designed and developed my portfolio website implementing motion design and a firebase database.",
+        techStack: ['SvelteKit', 'Tailwind', 'Firebase', 'GSAP']
     },
     {
         id: 2,

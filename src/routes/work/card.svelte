@@ -23,9 +23,9 @@
 					<p class="text-[#d2dbe6]">{description}</p>
 				</div>
 
-				<div class="repo-url">
+				<!-- <div class="repo-url">
 					<p class="text-[#d2dbe6] font-bold">Repository:</p>
-				</div>
+				</div> -->
 
 				<div class="techstack flex flex-wrap gap-1">
 					{#each techStack as tech}
@@ -193,7 +193,7 @@
 	}
 
 	.card-image {
-		scale: 1.2;
+		/* scale: 1.2; */
 		position: absolute;
 		inset: 0;
 		object-fit: cover;
@@ -203,7 +203,7 @@
 	}
 
 	.card:hover .card-image {
-		scale: 1.12;
+		scale: 1.05;
 	}
 
 	.text-wrapper {
@@ -262,8 +262,8 @@
 			font-size: 0.5rem;
 		}
 		@media (max-width: 390px) {
-			gap: 0;
-			margin-top: 0.2rem;
+			/* gap: 0; */
+			margin-top: 0.5rem;
 		}
 		font-size: 0.75rem;
 		margin-top: 0.85rem;

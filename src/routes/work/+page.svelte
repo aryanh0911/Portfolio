@@ -45,7 +45,13 @@
 					duration: 1.5,
 					stagger: 0.04,
 					ease: 'power3.out'
-				}).from(
+				})
+				.to('#header-text p span', {
+					opacity: 0,
+					stagger: 0.12,
+					delay: 2,
+				})
+				.from(
 					'.floating-cards .card',
 					{
 						opacity: 0,
