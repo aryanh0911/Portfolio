@@ -3,9 +3,12 @@
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
 	gsap.registerPlugin(ScrollTrigger);
+	//--------------------------------------------------------------------------------------------
 
-	//--- Components ---/
-	import Socials from './socials.svelte';
+	//--- Components ---
+	import SocialsInsideForm from './socialsInsideForm.svelte';
+	import SocialsOutsideForm from './socialsOutsideForm.svelte';
+	//--------------------------------------------------------------------------------------------
 
 	//--- Firebase ---
 	import { db, realtimeDb } from '$lib/firebase.js';
@@ -49,17 +52,19 @@
 
 		// Change button text
 		let tl2 = gsap.timeline();
-		tl2.to('.submit-text', { opacity: 0, duration: 0.2 })
-		.call(() => {
-			submitBtnText = 'Submitted';
-		})
-		.to('.submit-text', { opacity: 1, duration: 0.2});
+		tl2
+			.to('.submit-text', { opacity: 0, duration: 0.2 })
+			.call(() => {
+				submitBtnText = 'Submitted';
+			})
+			.to('.submit-text', { opacity: 1, duration: 0.2 });
 
 		// Clear form
 		name = '';
 		email = '';
 		msgContent = '';
 	}
+	//----------------------------------------------------------------------------------------------
 
 	//--- GSAP ---
 	onMount(() => {
@@ -68,6 +73,12 @@
 		let tl = gsap.timeline();
 		tl.from('.main-text span', { opacity: 0, y: 32, stagger: 0.07, ease: 'power3.out' });
 		tl.from('.container', { opacity: 0, y: 8, duration: 0.5, ease: 'power3.inOut' });
+		tl.from('.LinkedIn, .Github, .Twitter, .Instagram', {
+			opacity: 0,
+			y: 10,
+			stagger: 0.05,
+			ease: 'power4.out'
+		});
 	});
 </script>
 
@@ -98,7 +109,7 @@
 				</div>
 
 				<div class="bottom w-full flex justify-between">
-					<Socials />
+					<SocialsInsideForm />
 
 					<div class="submit-btn font-mont rounded-[10px]">
 						<button type="submit" class="submit-text">{submitBtnText}</button>
@@ -107,12 +118,14 @@
 			</form>
 		</div>
 	</div>
+	<SocialsOutsideForm />
 </div>
 
 <style>
 	* {
 		visibility: hidden;
 	}
+
 	.main {
 		display: flex;
 		align-items: center;
@@ -130,8 +143,9 @@
 
 	.main-text div {
 		font-size: 5rem;
+		padding: 1rem;
+		line-height: 0.45;
 		background: linear-gradient(to right, lightseagreen, rgb(118, 62, 215));
-		line-height: 0.85;
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
@@ -145,7 +159,7 @@
 
 	.form-wrapper {
 		width: 45rem;
-		padding-right: 2rem;
+		padding-right: 1rem;
 		display: flex;
 		justify-content: center;
 
@@ -259,16 +273,9 @@
 		font-size: 1rem;
 	}
 
-	/* .alert {
-		width: 100%;
-		background: rgb(0, 255, 106);
-		padding: 10px 20px;
-		border-radius: 5px;
-		text-align: center;
-		font-size: 18px;
-		font-weight: 900;
-		display: none;
-		color: white;
-		z-index: 10;
-	} */
+	.bottom {
+		@media (max-width: 495px) {
+			justify-content: center;
+		}
+	}
 </style>
