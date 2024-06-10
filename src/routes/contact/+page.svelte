@@ -3,10 +3,13 @@
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
 	gsap.registerPlugin(ScrollTrigger);
-//--------------------------------------------------------------------------------------------
+	//--------------------------------------------------------------------------------------------
+
 	//--- Components ---
-	import Socials from './socials.svelte';
-//--------------------------------------------------------------------------------------------
+	import SocialsInsideForm from './socialsInsideForm.svelte';
+	import SocialsOutsideForm from './socialsOutsideForm.svelte';
+	//--------------------------------------------------------------------------------------------
+
 	//--- Firebase ---
 	import { db, realtimeDb } from '$lib/firebase.js';
 	import { collection, addDoc } from 'firebase/firestore';
@@ -61,10 +64,7 @@
 		email = '';
 		msgContent = '';
 	}
-//----------------------------------------------------------------------------------------------
-	//---Boolean that varies with window-size---
-	let isMobile = false;
-	// let initialCheckDone = false;
+	//----------------------------------------------------------------------------------------------
 
 	//--- GSAP ---
 	onMount(() => {
@@ -73,18 +73,12 @@
 		let tl = gsap.timeline();
 		tl.from('.main-text span', { opacity: 0, y: 32, stagger: 0.07, ease: 'power3.out' });
 		tl.from('.container', { opacity: 0, y: 8, duration: 0.5, ease: 'power3.inOut' });
-		tl.from('.LinkedIn, .Github, .Twitter, .Instagram', { opacity: 0, stagger: 0.04 });
-
-		//---Check window size and add event listener for resize---
-		const checkWindowSize = () => {
-			isMobile = window.innerWidth <= 495;
-			// initialCheckDone = true;
-		};
-		checkWindowSize(); // Check on initial load
-		window.addEventListener('resize', checkWindowSize); //check on resize
-		return () => {
-			window.removeEventListener('resize', checkWindowSize);
-		};
+		tl.from('.LinkedIn, .Github, .Twitter, .Instagram', {
+			opacity: 0,
+			y: 10,
+			stagger: 0.05,
+			ease: 'power4.out'
+		});
 	});
 </script>
 
@@ -115,9 +109,7 @@
 				</div>
 
 				<div class="bottom w-full flex justify-between">
-					<!-- {#if initialCheckDone} -->
-						<Socials smallScreen={isMobile ? 'hidden' : 'visible'} />
-					<!-- {/if} -->
+					<SocialsInsideForm />
 
 					<div class="submit-btn font-mont rounded-[10px]">
 						<button type="submit" class="submit-text">{submitBtnText}</button>
@@ -126,9 +118,7 @@
 			</form>
 		</div>
 	</div>
-	<!-- {#if initialCheckDone} -->
-		<Socials smallScreen={isMobile ? 'visible' : 'hidden'} />
-	<!-- {/if} -->
+	<SocialsOutsideForm />
 </div>
 
 <style>
@@ -153,8 +143,9 @@
 
 	.main-text div {
 		font-size: 5rem;
+		padding: 1rem;
+		line-height: 0.45;
 		background: linear-gradient(to right, lightseagreen, rgb(118, 62, 215));
-		line-height: 0.85;
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
@@ -168,7 +159,7 @@
 
 	.form-wrapper {
 		width: 45rem;
-		padding-right: 2rem;
+		padding-right: 1rem;
 		display: flex;
 		justify-content: center;
 
@@ -287,17 +278,4 @@
 			justify-content: center;
 		}
 	}
-
-	/* .alert {
-		width: 100%;
-		background: rgb(0, 255, 106);
-		padding: 10px 20px;
-		border-radius: 5px;
-		text-align: center;
-		font-size: 18px;
-		font-weight: 900;
-		display: none;
-		color: white;
-		z-index: 10;
-	} */
 </style>
