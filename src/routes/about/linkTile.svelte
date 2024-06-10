@@ -26,10 +26,7 @@
 		>
 			<p class="text-lg font-bold text-[almostblack]">{data.name}</p>
 		</div>
-		<div
-			id={data.revealId}
-			class="w-full h-full p-1 overflow-hidden"
-		></div>
+		<div id={data.revealId} class="w-full h-full p-1 overflow-hidden"></div>
 	</div>
 {/each}
 

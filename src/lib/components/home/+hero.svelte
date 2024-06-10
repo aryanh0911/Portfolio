@@ -32,7 +32,7 @@
 		window.location.href = '/work';
 	}
 
-	// GSAP
+	//--- GSAP ---
 	onMount(() => {
 		gsap.set('*', { visibility: 'visible' });
 		let mm = gsap.matchMedia();
@@ -208,7 +208,7 @@
 			transform 800ms cubic-bezier(0.28, 0.93, 0.34, 0.85),
 			opacity 0.4s,
 			z-index 0.8s;
-		border: 2px solid rgba(255, 255, 255, 0.434);
+		border: 1px solid rgba(255, 255, 255, 0.434);
 		backdrop-filter: blur(10px);
 		box-shadow: -10px 10px 20px black;
 	}
