@@ -1,8 +1,9 @@
 <script>
 	import socialsData from './socialsData';
+    export let smallScreen =''
 </script>
 
-<div class="socials-div flex gap-4 items-center justify-center">
+<div class="socials-div flex gap-4 items-center justify-center {smallScreen}">
 	{#each socialsData as data}
 		<div class="{data.name} text-[gray] text-2xl hover:text-white">
 			<a href={data.url}><i class={data.icon}></i></a>
@@ -20,4 +21,13 @@
             gap: 0.5rem;
         }
     }
+
+    .visible {
+        display: flex;
+    }
+
+    .hidden {
+        display: none
+    }
+
 </style>

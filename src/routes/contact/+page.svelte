@@ -3,10 +3,10 @@
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
 	gsap.registerPlugin(ScrollTrigger);
-
-	//--- Components ---/
+//--------------------------------------------------------------------------------------------
+	//--- Components ---
 	import Socials from './socials.svelte';
-
+//--------------------------------------------------------------------------------------------
 	//--- Firebase ---
 	import { db, realtimeDb } from '$lib/firebase.js';
 	import { collection, addDoc } from 'firebase/firestore';
@@ -49,17 +49,22 @@
 
 		// Change button text
 		let tl2 = gsap.timeline();
-		tl2.to('.submit-text', { opacity: 0, duration: 0.2 })
-		.call(() => {
-			submitBtnText = 'Submitted';
-		})
-		.to('.submit-text', { opacity: 1, duration: 0.2});
+		tl2
+			.to('.submit-text', { opacity: 0, duration: 0.2 })
+			.call(() => {
+				submitBtnText = 'Submitted';
+			})
+			.to('.submit-text', { opacity: 1, duration: 0.2 });
 
 		// Clear form
 		name = '';
 		email = '';
 		msgContent = '';
 	}
+//----------------------------------------------------------------------------------------------
+	//---Boolean that varies with window-size---
+	let isMobile = false;
+	// let initialCheckDone = false;
 
 	//--- GSAP ---
 	onMount(() => {
@@ -68,6 +73,18 @@
 		let tl = gsap.timeline();
 		tl.from('.main-text span', { opacity: 0, y: 32, stagger: 0.07, ease: 'power3.out' });
 		tl.from('.container', { opacity: 0, y: 8, duration: 0.5, ease: 'power3.inOut' });
+		tl.from('.LinkedIn, .Github, .Twitter, .Instagram', { opacity: 0, stagger: 0.04 });
+
+		//---Check window size and add event listener for resize---
+		const checkWindowSize = () => {
+			isMobile = window.innerWidth <= 495;
+			// initialCheckDone = true;
+		};
+		checkWindowSize(); // Check on initial load
+		window.addEventListener('resize', checkWindowSize); //check on resize
+		return () => {
+			window.removeEventListener('resize', checkWindowSize);
+		};
 	});
 </script>
 
@@ -98,7 +115,9 @@
 				</div>
 
 				<div class="bottom w-full flex justify-between">
-					<Socials />
+					<!-- {#if initialCheckDone} -->
+						<Socials smallScreen={isMobile ? 'hidden' : 'visible'} />
+					<!-- {/if} -->
 
 					<div class="submit-btn font-mont rounded-[10px]">
 						<button type="submit" class="submit-text">{submitBtnText}</button>
@@ -107,12 +126,16 @@
 			</form>
 		</div>
 	</div>
+	<!-- {#if initialCheckDone} -->
+		<Socials smallScreen={isMobile ? 'visible' : 'hidden'} />
+	<!-- {/if} -->
 </div>
 
 <style>
 	* {
 		visibility: hidden;
 	}
+
 	.main {
 		display: flex;
 		align-items: center;
@@ -257,6 +280,12 @@
 
 	::placeholder {
 		font-size: 1rem;
+	}
+
+	.bottom {
+		@media (max-width: 495px) {
+			justify-content: center;
+		}
 	}
 
 	/* .alert {
