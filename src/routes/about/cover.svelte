@@ -1,5 +1,5 @@
 <script>
-	import pfp1 from '$lib/assets/about-page/pfp1.jpeg';
+	let  pfp1 = 'https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/pfp1';
 </script>
 
 <section>
@@ -26,7 +26,7 @@
 <style>
 	#cover-page {
 		background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.543)),
-			url('$lib/assets/about-page/vinyl.gif');
+			url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/vinylGIF');
 		background-size: cover;
 		position: relative;
 		visibility: hidden;
