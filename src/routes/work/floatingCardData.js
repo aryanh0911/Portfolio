@@ -1,9 +1,9 @@
-import oikyotaanImage from '$lib/assets/work-page/oikyotaan_vertical.jpeg';
-import mlClubImage from '$lib/assets/work-page/mlclub_vertical.jpeg';
-import gdscExploreImage from '$lib/assets/work-page/gdscexplore_vertical.jpeg';
-import githubSearchImage from '$lib/assets/work-page/githubsearch_vertical 1.jpg';
-import pomodoroImage from '$lib/assets/work-page/pomodoro_vertical.jpeg';
-import portfolioImage from '$lib/assets/work-page/portfolio.png'
+let oikyotaanImage = 'https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/work-page/oikyotaan';
+let mlClubImage = 'https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/work-page/mlclub';
+let gdscExploreImage = 'https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/work-page/gdscexplore';
+let githubSearchImage = 'https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/work-page/githubsearch';
+let pomodoroImage = 'https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/work-page/pomodoro';
+let portfolioImage = 'https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/work-page/portfolio'
 
 
 
