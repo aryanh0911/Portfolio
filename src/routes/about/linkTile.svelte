@@ -35,53 +35,53 @@
 
 <style>
 	#youtube-fg {
-		background-image: url('$lib/assets/about-page/contour-crp.png');
+		background-image: url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/contour-crp');
 		background-size: cover;
 		background-position: center;
 		background-color: #cf3c34;
 	}
 	#youtube-reveal {
 		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.573)),
-			url('$lib/assets/about-page/youtube.png');
+			url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/youtube');
 		background-size: cover;
 		background-position: center bottom 20%;
 	}
 
 	#soundcloud-fg {
-		background-image: url('$lib/assets/about-page/contour-crp.png');
+		background-image: url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/contour-crp');
 		background-size: cover;
 		background-position: center 20%;
 		background-color: #fb6827;
 	}
 	#soundcloud-reveal {
 		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.573)),
-			url('$lib/assets/about-page/soundcloud.png');
+			url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto,fl_lossy/v1/My%20Portfolio%20(SvelteKit)%20May%202024/soundcloud');
 		background-size: cover;
 		background-position: center bottom 95%;
 	}
 
 	#spotify-fg {
-		background-image: url('$lib/assets/about-page/contour-crp.png');
+		background-image: url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/contour-crp');
 		background-size: cover;
 		background-position: center 30%;
 		background-color: #25d865;
 	}
 	#spotify-reveal {
 		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.573)),
-			url('$lib/assets/about-page/spotify.png');
+			url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/spotify');
 		background-size: cover;
 		background-position: center bottom 95%;
 	}
 
 	#goodreads-fg {
-		background-image: url('$lib/assets/about-page/contour-crp.png');
+		background-image: url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/contour-crp');
 		background-size: cover;
 		background-position: center bottom 0%;
 		background-color: #e9e5cd;
 	}
 	#goodreads-reveal {
 		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.573)),
-			url('$lib/assets/about-page/goodreads.png');
+			url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/goodreads');
 		background-size: cover;
 		background-position: center bottom 100%;
 	}
