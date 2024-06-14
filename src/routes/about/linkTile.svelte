@@ -42,7 +42,7 @@
 	}
 	#youtube-reveal {
 		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.573)),
-			url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/youtube');
+			url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/about-page/youtube_comp');
 		background-size: cover;
 		background-position: center bottom 20%;
 	}
@@ -55,7 +55,7 @@
 	}
 	#soundcloud-reveal {
 		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.573)),
-			url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto,fl_lossy/v1/My%20Portfolio%20(SvelteKit)%20May%202024/soundcloud');
+			url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/about-page/soundcloud_comp');
 		background-size: cover;
 		background-position: center bottom 95%;
 	}
