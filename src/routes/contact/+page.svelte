@@ -19,6 +19,7 @@
 	let email = '';
 	let msgContent = '';
 	let submitBtnText = 'Submit';
+	let submitClicked = false;
 
 	async function handleSubmit(event) {
 		event.preventDefault();
@@ -54,10 +55,10 @@
 		let tl2 = gsap.timeline();
 		tl2
 			.to('.submit-text', { opacity: 0, duration: 0.2 })
-			.call(() => {
-				submitBtnText = 'Submitted';
-			})
-			.to('.submit-text', { opacity: 1, duration: 0.2 });
+			.call(() => (submitBtnText = 'Submitted'))
+			.to('.submit-text', { opacity: 1, duration: 0.2 })
+			.call(() => submitClicked = true)
+			.from('#go-home', { opacity: 1, y: 6, duration: 0.5 });
 
 		// Clear form
 		name = '';
@@ -117,6 +118,11 @@
 				</div>
 			</form>
 		</div>
+			<div
+				class="flex justify-center items-center pt-[0.5rem]"
+			>
+				<a id="go-home" href="/" class="{submitClicked? 'go-home-visible' : 'go-home-hidden'} text-[#9e9e9e]">Go back Home?</a>
+			</div>
 	</div>
 	<SocialsOutsideForm />
 </div>
@@ -161,6 +167,7 @@
 		width: 45rem;
 		padding-right: 1rem;
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 
 		@media (max-width: 840px) {
@@ -277,5 +284,12 @@
 		@media (max-width: 495px) {
 			justify-content: center;
 		}
+	}
+
+	.go-home-visible {
+		visibility: visible;
+	}
+	.go-home-hidden {
+		visibility: hidden !important;
 	}
 </style>
