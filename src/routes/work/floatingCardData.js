@@ -15,7 +15,7 @@ const floatingCards = [
         projectName: "Portfolio",
         date: "May-2024",
         projectImage: portfolioImage,
-        repoURL: "",
+        repoURL: "/",
         URL: "",
         description: "Designed and developed my portfolio website implementing motion design and a firebase database.",
         techStack: ['SvelteKit', 'Tailwind', 'Firebase', 'GSAP']
@@ -27,7 +27,7 @@ const floatingCards = [
         projectName: "Oikyotaan'24",
         date: "March-2024",
         projectImage: oikyotaanImage,
-        repoURL: "",
+        repoURL: "https://github.com/aryanh0911/oikyotaan-2024",
         URL: "",
         description: "Collaborated with a team of UI/UX Designers and Developers to build the official site of Oikyotaan 2024.",
         techStack: ['ReactJs', 'PostCSS', 'Javascript']
@@ -39,7 +39,7 @@ const floatingCards = [
         projectName: "ML Club",
         date: "May, 2024",
         projectImage: mlClubImage,
-        repoURL: "",
+        repoURL: "/",
         URL: "",
         description: "Designed and Developed the official website for Machine Learning Club NIT Silchar",
         techStack: ['SvelteKit', 'Tailwind', 'Firebase']
@@ -51,7 +51,7 @@ const floatingCards = [
         projectName: "GDSC Explore'24",
         date: "May, 2024",
         projectImage: gdscExploreImage,
-        repoURL: "",
+        repoURL: "https://github.com/aryanh0911/gdsc-explore-4.0",
         URL: "",
         description: "Designed and Developed the official website for Machine Learning Club NIT Silchar",
         techStack: ['SvelteKit', 'Tailwind', 'Firebase']
@@ -63,7 +63,7 @@ const floatingCards = [
         projectName: "Github Search",
         date: "May, 2024",
         projectImage: githubSearchImage,
-        repoURL: "",
+        repoURL: "https://github.com/aryanh0911/Github-Profile-Viewer",
         URL: "",
         description: "Designed and Developed the official website for Machine Learning Club NIT Silchar",
         techStack: ['SvelteKit', 'Tailwind', 'Firebase']
@@ -75,7 +75,7 @@ const floatingCards = [
         projectName: "Pomodoro",
         date: "May, 2024",
         projectImage: pomodoroImage,
-        repoURL: "",
+        repoURL: "https://github.com/aryanh0911/Pomodoro-SvelteKit",
         URL: "",
         description: "Designed and developed a simple Pomodoro timer. Implemented a Dark-mode toggle using Tailwind.",
         techStack: ['SvelteKit', 'Tailwind', 'Firebase']

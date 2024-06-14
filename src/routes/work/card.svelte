@@ -2,7 +2,7 @@
 	export let cardNoClass, generalClass, techStack, projectImage, projectName, date, description;
 </script>
 
-<div class="{cardNoClass} {generalClass} card rounded-md">
+<div class="{cardNoClass} {generalClass} card rounded-md" on:click>
 
 	<div class="card-image-container relative">
 		<div class="image-overlay"></div>
