@@ -32,33 +32,33 @@
 
 <style>
 	#youtube-fg {
-		background-image: url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/contour-crp');
+		background-image: url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/about-page/contour_comp');
 		background-size: cover;
 		background-position: center;
 		background-color: #cf3c34;
 	}
 	#youtube-reveal {
 		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.573)),
-			url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/youtube');
+			url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/about-page/youtube_comp');
 		background-size: cover;
 		background-position: center bottom 20%;
 	}
 
 	#soundcloud-fg {
-		background-image: url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/contour-crp');
+		background-image: url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/about-page/contour_comp');
 		background-size: cover;
 		background-position: center 20%;
 		background-color: #fb6827;
 	}
 	#soundcloud-reveal {
 		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.573)),
-			url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto,fl_lossy/v1/My%20Portfolio%20(SvelteKit)%20May%202024/soundcloud');
+			url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/about-page/soundcloud_comp');
 		background-size: cover;
 		background-position: center bottom 95%;
 	}
 
 	#spotify-fg {
-		background-image: url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/contour-crp');
+		background-image: url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/about-page/contour_comp');
 		background-size: cover;
 		background-position: center 30%;
 		background-color: #25d865;
@@ -71,7 +71,7 @@
 	}
 
 	#goodreads-fg {
-		background-image: url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/contour-crp');
+		background-image: url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/about-page/contour_comp');
 		background-size: cover;
 		background-position: center bottom 0%;
 		background-color: #e9e5cd;

@@ -1,5 +1,5 @@
 <script>
-	let  pfp1 = 'https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/pfp1';
+	let  pfp1 = 'https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/about-page/pfp1_comp';
 </script>
 
 <section>
