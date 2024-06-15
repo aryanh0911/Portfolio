@@ -210,7 +210,7 @@
 			z-index 0.8s;
 		border: 1px solid rgba(255, 255, 255, 0.434);
 		backdrop-filter: blur(10px);
-		box-shadow: -10px 10px 20px black;
+		box-shadow: -10px 10px 12px black;
 	}
 
 	.big-card {
@@ -220,7 +220,7 @@
 
 	#card-1 {
 		transform: translateX(-10%) rotate(-1deg);
-		background-image: url('https://images.unsplash.com/photo-1511882150382-421056c89033?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url('$lib/assets/home-page/batch-2/contact.jpg');
 		background-position: center;
 		background-size: cover;
 		display: flex;
@@ -230,7 +230,7 @@
 
 	#card-2 {
 		transform: translateX(-6%) rotate(-3deg);
-		background-image: url('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.68)) , url('$lib/assets/home-page/batch-2/about_1.jpg');
 		background-position: center;
 		background-size: cover;
 		display: flex;
@@ -240,8 +240,8 @@
 
 	#card-3 {
 		transform: translateX(-10%, 3%) rotate(5deg);
-		background-image: url('https://images.unsplash.com/photo-1625805866449-3589fe3f71a3?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-		background-position: center;
+		background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.422)), url('$lib/assets/home-page/batch-2/work_2.jpg');
+		background-position: top;
 		background-size: cover;
 		display: flex;
 		align-items: center;
@@ -251,11 +251,18 @@
 	.card-text {
 		align-items: center;
 		justify-content: center;
-		font-size: 2.4rem;
+		font-size: 2.2rem;
 		color: white;
 		text-shadow: 2px 2px 2px black;
 		opacity: 0;
 		transition: opacity 0.4s ease-in-out;
+
+		@media (max-width: 780px) {
+			font-size: 4vw;
+		}
+		@media (max-width: 425px) {
+			font-size: 4.5vw;
+		}
 	}
 
 	.card-group:hover > #card-1 {
