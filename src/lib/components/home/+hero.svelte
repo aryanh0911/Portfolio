@@ -251,7 +251,7 @@
 	.card-text {
 		align-items: center;
 		justify-content: center;
-		font-size: 2.4rem;
+		font-size: 2.2rem;
 		color: white;
 		text-shadow: 2px 2px 2px black;
 		opacity: 0;
