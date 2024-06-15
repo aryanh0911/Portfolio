@@ -57,64 +57,84 @@
 						rotate: -24,
 						duration: 0.2,
 						delay: 0.5
-					})
+					});
 					gsap.to('#card-2', {
 						x: '-2%',
 						y: '0%',
 						rotate: 3,
 						duration: 0.2,
 						delay: 0.5
-					})
+					});
 					gsap.to('#card-3', {
 						x: '75%',
 						y: '16%',
 						rotate: 24,
 						duration: 0.2,
 						delay: 0.5
-					})
+					});
 
 					//---Small Cards---
-					gsap.fromTo('#charizard',{opacity: 0}, {
-						opacity: .7,
-						x: '240%',
-						y: '-180%',
-						rotate: -15,
-						duration: 0.15,
-						delay: 1.2,
-					})
-					gsap.fromTo('#bulbasaur',{opacity: 0}, {
-						opacity: 0.7,
-						x: '200%',
-						y: '180%',
-						rotate: 15,
-						duration: 0.2,
-						delay: 1.2,
-						zIndex: 2
-					})
-					gsap.fromTo('#mewtwo',{opacity: 0}, {
-						opacity: 0.7,
-						x: '-320%',
-						y: '-180%',
-						rotate: 15,
-						duration: 0.15,
-						delay: 1.2,
-						zIndex: 1
-					})
-					gsap.fromTo('#lugia',{opacity: 0}, {
-						opacity: 0.7,
-						x: '-320%',
-						y: '180%',
-						rotate: -15,
-						duration: 0.15,
-						delay: 1.2,
-						zIndex: -2
-					})
+					gsap.fromTo(
+						'#charizard',
+						{ opacity: 0 },
+						{
+							opacity: 0.7,
+							x: '240%',
+							y: '-180%',
+							rotate: -15,
+							duration: 0.15,
+							delay: 1.2
+						}
+					);
+					gsap.fromTo(
+						'#bulbasaur',
+						{ opacity: 0 },
+						{
+							opacity: 0.7,
+							x: '200%',
+							y: '180%',
+							rotate: 15,
+							duration: 0.2,
+							delay: 1.2,
+							zIndex: 2
+						}
+					);
+					gsap.fromTo(
+						'#mewtwo',
+						{ opacity: 0 },
+						{
+							opacity: 0.7,
+							x: '-320%',
+							y: '-180%',
+							rotate: 15,
+							duration: 0.15,
+							delay: 1.2,
+							zIndex: 1
+						}
+					);
+					gsap.fromTo(
+						'#lugia',
+						{ opacity: 0 },
+						{
+							opacity: 0.7,
+							x: '-320%',
+							y: '180%',
+							rotate: -15,
+							duration: 0.15,
+							delay: 1.2,
+							zIndex: -2
+						}
+					);
 
 					//---Card-contents---
-					tl.to('.card-text', {
-						opacity: 1,
-						stagger: 0.12
-					}, 0.5)
+					tl.to(
+						'.card-text',
+						{
+							opacity: 1,
+							stagger: 0.12
+						},
+						0.5
+					);
 				}
 			}
 		);
@@ -178,6 +198,9 @@
 </section>
 
 <style>
+	/* ---FONTS--- */
+	@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700;800&display=swap');
+
 	* {
 		visibility: hidden;
 	}
@@ -220,7 +243,8 @@
 
 	#card-1 {
 		transform: translateX(-10%) rotate(-1deg);
-		background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url('$lib/assets/home-page/batch-2/contact.jpg');
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),
+			url('$lib/assets/home-page/batch-2/contact.jpg');
 		background-position: center;
 		background-size: cover;
 		display: flex;
@@ -230,7 +254,8 @@
 
 	#card-2 {
 		transform: translateX(-6%) rotate(-3deg);
-		background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.68)) , url('$lib/assets/home-page/batch-2/about_1.jpg');
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.68)),
+			url('$lib/assets/home-page/batch-2/about_1.jpg');
 		background-position: center;
 		background-size: cover;
 		display: flex;
@@ -240,7 +265,8 @@
 
 	#card-3 {
 		transform: translateX(-10%, 3%) rotate(5deg);
-		background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.422)), url('$lib/assets/home-page/batch-2/work_2.jpg');
+		background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.422)),
+			url('$lib/assets/home-page/batch-2/work_2.jpg');
 		background-position: top;
 		background-size: cover;
 		display: flex;
@@ -251,8 +277,17 @@
 	.card-text {
 		align-items: center;
 		justify-content: center;
+		font-family: 'M Plus Rounded 1c', sans-serif;
 		font-size: 2.2rem;
-		color: white;
+		font-weight: 500;
+		font-style: normal;
+		/* text-transform: upercase; */
+		letter-spacing: -0.06rem;
+		-webkit-user-select: none; /* Safari */
+		-moz-user-select: none; /* Firefox */
+		-ms-user-select: none; /* IE10+/Edge */
+		user-select: none; /* Standard */
+		color: rgba(245, 245, 245, 0.79);
 		text-shadow: 2px 2px 2px black;
 		opacity: 0;
 		transition: opacity 0.4s ease-in-out;
