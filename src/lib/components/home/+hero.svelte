@@ -230,7 +230,7 @@
 
 	#card-2 {
 		transform: translateX(-6%) rotate(-3deg);
-		background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.607)) , url('$lib/assets/home-page/batch-2/about_1.jpg');
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.68)) , url('$lib/assets/home-page/batch-2/about_1.jpg');
 		background-position: center;
 		background-size: cover;
 		display: flex;
@@ -256,6 +256,13 @@
 		text-shadow: 2px 2px 2px black;
 		opacity: 0;
 		transition: opacity 0.4s ease-in-out;
+
+		@media (max-width: 780px) {
+			font-size: 4vw;
+		}
+		@media (max-width: 425px) {
+			font-size: 4.5vw;
+		}
 	}
 
 	.card-group:hover > #card-1 {
