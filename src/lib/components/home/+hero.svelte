@@ -210,7 +210,7 @@
 			z-index 0.8s;
 		border: 2px solid rgba(255, 255, 255, 0.434);
 		backdrop-filter: blur(10px);
-		box-shadow: -10px 10px 20px black;
+		box-shadow: -10px 10px 12px black;
 	}
 
 	.big-card {
@@ -220,7 +220,7 @@
 
 	#card-1 {
 		transform: translateX(-10%) rotate(-1deg);
-		background-image: url('https://images.unsplash.com/photo-1511882150382-421056c89033?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.315), black), url('$lib/assets/home-page/arcade-xoxo.webp');
 		background-position: center;
 		background-size: cover;
 		display: flex;
