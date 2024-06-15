@@ -220,7 +220,7 @@
 
 	#card-1 {
 		transform: translateX(-10%) rotate(-1deg);
-		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.315), black), url('$lib/assets/home-page/arcade-xoxo.webp');
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url('$lib/assets/home-page/batch-2/contact.jpg');
 		background-position: center;
 		background-size: cover;
 		display: flex;
@@ -230,7 +230,7 @@
 
 	#card-2 {
 		transform: translateX(-6%) rotate(-3deg);
-		background-image: url('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.607)) , url('$lib/assets/home-page/batch-2/about_1.jpg');
 		background-position: center;
 		background-size: cover;
 		display: flex;
@@ -240,8 +240,8 @@
 
 	#card-3 {
 		transform: translateX(-10%, 3%) rotate(5deg);
-		background-image: url('https://images.unsplash.com/photo-1625805866449-3589fe3f71a3?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-		background-position: center;
+		background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.422)), url('$lib/assets/home-page/batch-2/work_2.jpg');
+		background-position: top;
 		background-size: cover;
 		display: flex;
 		align-items: center;
