@@ -241,10 +241,11 @@
 		border-radius: 1vmin;
 	}
 
+	/* Contact */
 	#card-1 {
 		transform: translateX(-10%) rotate(-1deg);
 		background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),
-			url('$lib/assets/home-page/batch-2/contact.jpg');
+			url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/home-page/comp/contact_1');
 		background-position: center;
 		background-size: cover;
 		display: flex;
@@ -252,10 +253,11 @@
 		justify-content: center;
 	}
 
+	/* About */
 	#card-2 {
 		transform: translateX(-6%) rotate(-3deg);
 		background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.68)),
-			url('$lib/assets/home-page/batch-2/about_1.jpg');
+			url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/home-page/comp/about_1');
 		background-position: center;
 		background-size: cover;
 		display: flex;
@@ -263,10 +265,11 @@
 		justify-content: center;
 	}
 
+	/* Work */
 	#card-3 {
 		transform: translateX(-10%, 3%) rotate(5deg);
 		background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.422)),
-			url('$lib/assets/home-page/batch-2/work_2.jpg');
+			url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/home-page/comp/work_1');
 		background-position: top;
 		background-size: cover;
 		display: flex;
@@ -277,7 +280,7 @@
 	.card-text {
 		align-items: center;
 		justify-content: center;
-		font-family: 'M Plus Rounded 1c', sans-serif;
+		font-family: 'M Plus Rounded 1c', monospace;
 		font-size: 2.2rem;
 		font-weight: 500;
 		font-style: normal;

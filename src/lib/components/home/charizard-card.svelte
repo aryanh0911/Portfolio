@@ -21,7 +21,7 @@
 			transform 800ms cubic-bezier(0.28, 0.93, 0.34, 0.85),
 			opacity 0.4s,
 			z-index 0.8s;
-		background-image: url('https://www.serebii.net/card/pokemondetectivepikachu/5.jpg');
+		background-image: url('https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/home-page/comp/pokemon-cards_comp/charizard_comp');
 		background-position: center;
 		background-size: cover;
 		/* transform: translate(-50%, -50%); */
