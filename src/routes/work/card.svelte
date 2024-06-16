@@ -3,7 +3,6 @@
 </script>
 
 <div class="{cardNoClass} {generalClass} card rounded-md" on:click>
-
 	<div class="card-image-container relative">
 		<div class="image-overlay"></div>
 		<img class="card-image" src={projectImage} alt="anything" />
@@ -12,7 +11,7 @@
 			<div class="text-box-overlay"></div>
 			<div class="text-box w-[100%] p-2 flex flex-col">
 				<div class="title">
-					<p class="text-[#e8edf3] font-bold">{projectName}</p>
+					<p class="text-[#e8edf3]">{projectName}</p>
 				</div>
 
 				<div class="date text-[#d2dbe689]">
@@ -42,6 +41,14 @@
 </div>
 
 <style>
+	/* FONTS */
+	@import url('https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=M+PLUS+Rounded+1c&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+	p {
+		/* font-family: 'Noto Sans'; */
+		font-family: 'Poppins';
+	}
+
 	.card {
 		visibility: hidden;
 		aspect-ratio: 5/7;
@@ -212,8 +219,8 @@
 			height: 83%;
 		}
 		@media (max-width: 390px) {
-			top: 5%;
-			height: 91%;
+			top: 2%;
+			height: 96%;
 		}
 		top: 35%;
 		left: 50%;
@@ -231,8 +238,10 @@
 	}
 
 	.title p {
+		font-weight: 600;
+
 		@media (max-width: 690px) {
-			font-size: 1.2rem;
+			font-size: 1.1rem;
 		}
 		font-size: 1.6rem;
 	}

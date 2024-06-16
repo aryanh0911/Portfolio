@@ -117,6 +117,9 @@
 </section>
 
 <style>
+	/* FONTS */
+	@import url('https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=M+PLUS+Rounded+1c&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 	#main-container {
 		display: grid;
 		place-content: center;
@@ -141,10 +144,11 @@
 		top: 25%;
 		transform: translate(-50%, -50%);
 		mix-blend-mode: difference;
-		color: white;
+		color: #c8c8c8;
+		font-family: 'M Plus Rounded 1c';
 		font-size: 5rem;
 		@media (max-width: 690px) {
-			font-size: 4rem;
+			font-size: 2.5rem;
 		}
 	}
 
