@@ -88,7 +88,7 @@
 			window.location.href = '/';
 		}}
 	/>
-	<main class="flex gap-4 flex-wrap justify-center mt-28 md:mt-32">
+	<main class="flex gap-4 lg:gap-14 flex-wrap justify-center mb-4 mt-28 md:mt-32">
 		<Paragraph />
 		<div id="right-pane" class="mt-auto mb-auto">
 			<div class="container flex flex-col gap-4">
