@@ -57,7 +57,7 @@
 			.to('.submit-text', { opacity: 0, duration: 0.2 })
 			.call(() => (submitBtnText = 'Submitted'))
 			.to('.submit-text', { opacity: 1, duration: 0.2 })
-			.call(() => submitClicked = true)
+			.call(() => (submitClicked = true))
 			.from('#go-home', { opacity: 1, y: 6, duration: 0.5 });
 
 		// Clear form
@@ -84,7 +84,7 @@
 </script>
 
 <div class="main">
-	<div class="main-text font-mont">
+	<div class="main-text">
 		<div>
 			<span>L</span><span>e</span><span>t's</span>
 		</div>
@@ -118,16 +118,24 @@
 				</div>
 			</form>
 		</div>
-			<div
-				class="flex justify-center items-center pt-[0.5rem]"
+		<div class="flex justify-center items-center pt-[0.5rem]">
+			<a
+				id="go-home"
+				href="/"
+				class="{submitClicked ? 'go-home-visible' : 'go-home-hidden'} text-[#9e9e9e]"
+				>Go back Home?</a
 			>
-				<a id="go-home" href="/" class="{submitClicked? 'go-home-visible' : 'go-home-hidden'} text-[#9e9e9e]">Go back Home?</a>
-			</div>
+		</div>
 	</div>
 	<SocialsOutsideForm />
 </div>
 
 <style>
+	/* FONTS */
+	@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700;800&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 	* {
 		visibility: hidden;
 	}
@@ -148,9 +156,11 @@
 	}
 
 	.main-text div {
+		font-family: 'Averia Sans Libre';
 		font-size: 5rem;
 		padding: 1rem;
 		line-height: 0.45;
+		letter-spacing: -2px;
 		background: linear-gradient(to right, lightseagreen, rgb(118, 62, 215));
 		background-clip: text;
 		-webkit-background-clip: text;
@@ -221,6 +231,7 @@
 		outline: none;
 		overflow: hidden;
 		padding: 0px 10px;
+		font-family: 'Poppins';
 		font-size: 1rem;
 		border-bottom: dotted 2px rgb(71, 180, 227);
 		color: rgb(215, 212, 212);
@@ -228,6 +239,7 @@
 	}
 
 	.inputBox textarea {
+		font-family: 'Poppins';
 		width: 100%;
 		height: 120px;
 		border-radius: 5px;
@@ -251,8 +263,9 @@
 	.submit-btn {
 		padding: 10px 26px;
 		color: #fff;
+		font-family: 'Poppins';
 		font-size: 1.1rem;
-		font-weight: bold;
+		font-weight: 600;
 		cursor: pointer;
 		text-align: center;
 		border-radius: 10px;
@@ -277,6 +290,7 @@
 	}
 
 	::placeholder {
+		font-family: 'Poppins';
 		font-size: 1rem;
 	}
 
