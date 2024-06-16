@@ -29,7 +29,7 @@
 				<div class="techstack flex flex-wrap gap-1">
 					{#each techStack as tech}
 						<div
-							class="flex justify-center items-center py-1 px-2 rounded-2xl bg-[#E3FEF7] text-[#135D66] opacity-[0.6]"
+							class="flex justify-center items-center py-1 px-2 rounded-2xl bg-[#E3FEF7] text-[#135D66] bg-opacity-[0.8]"
 						>
 							{tech}
 						</div>
@@ -47,6 +47,10 @@
 	p {
 		/* font-family: 'Noto Sans'; */
 		font-family: 'Poppins';
+		user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		-moz-user-select: none;
 	}
 
 	.card {
@@ -55,7 +59,7 @@
 		background-color: black;
 		cursor: pointer;
 		width: 21rem;
-		box-shadow: 10px 10px 26px black;
+		box-shadow: 3px 3px 12px black;
 		overflow: hidden;
 		/* position: relative; */ /* adding relative here ruins the whole grid layout below 1212px */
 		@media (min-width: 1212px) {
@@ -226,7 +230,7 @@
 		left: 50%;
 		transform: translateX(-50%);
 		overflow: hidden;
-		height: 62%;
+		height: 63%;
 	}
 
 	.text-box-overlay {
@@ -275,6 +279,7 @@
 			margin-top: 0.5rem;
 		}
 		font-size: 0.75rem;
+		font-weight: 600;
 		margin-top: 0.85rem;
 	}
 </style>

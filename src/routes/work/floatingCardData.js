@@ -3,7 +3,7 @@ let mlClubImage = 'https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_au
 let gdscExploreImage = 'https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/work-page/gdscexplore';
 let githubSearchImage = 'https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/work-page/githubsearch';
 let pomodoroImage = 'https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/work-page/pomodoro';
-let portfolioImage = 'https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/work-page/portfolio'
+let portfolioImage = 'https://res.cloudinary.com/dyn3q57b8/image/upload/f_auto,q_auto/v1/My%20Portfolio%20(SvelteKit)%20May%202024/work-page/portfolio_new_comp'
 
 
 
@@ -17,7 +17,7 @@ const floatingCards = [
         projectImage: portfolioImage,
         repoURL: "/",
         URL: "",
-        description: "Designed and developed my portfolio website implementing motion design and a firebase database.",
+        description: "Designed and developed my portfolio website implementing motion design and a Firebase database.",
         techStack: ['SvelteKit', 'Tailwind', 'Firebase', 'GSAP']
     },
     {
@@ -29,15 +29,15 @@ const floatingCards = [
         projectImage: oikyotaanImage,
         repoURL: "https://github.com/aryanh0911/oikyotaan-2024",
         URL: "",
-        description: "Collaborated with a team of UI/UX Designers and Developers to build the official site of Oikyotaan 2024.",
-        techStack: ['ReactJs', 'PostCSS', 'Javascript']
+        description: "Collaborated with a team of Developers and UI/UX Designers to build the official site of Oikyotaan 2024.",
+        techStack: ['React', 'Sass', 'Javascript']
     },
     {
         id: 3,
         generalClass: "card",
         cardNoClass: "card-3",
         projectName: "ML Club",
-        date: "May, 2024",
+        date: "May-2024",
         projectImage: mlClubImage,
         repoURL: "/",
         URL: "",
@@ -49,36 +49,36 @@ const floatingCards = [
         generalClass: "card",
         cardNoClass: "card-4",
         projectName: "GDSC Explore'24",
-        date: "May, 2024",
+        date: "March-2024",
         projectImage: gdscExploreImage,
         repoURL: "https://github.com/aryanh0911/gdsc-explore-4.0",
         URL: "",
-        description: "Designed and Developed the official website for Machine Learning Club NIT Silchar",
-        techStack: ['SvelteKit', 'Tailwind', 'Firebase']
+        description: "Collaborated with a team of Developers to build the official website of GDSC Explore 2024.",
+        techStack: ['React', 'Sass', 'Javascript']
     },
     {
         id: 5,
         generalClass: "card",
         cardNoClass: "card-5",
         projectName: "Github Search",
-        date: "May, 2024",
+        date: "Nov-2023",
         projectImage: githubSearchImage,
         repoURL: "https://github.com/aryanh0911/Github-Profile-Viewer",
         URL: "",
-        description: "Designed and Developed the official website for Machine Learning Club NIT Silchar",
-        techStack: ['SvelteKit', 'Tailwind', 'Firebase']
+        description: "Built a little tool that provides user-details of a Github user.",
+        techStack: ['Javascript', 'CSS', 'HTML']
     },
     {
         id: 6,
         generalClass: "card",
         cardNoClass: "card-6",
         projectName: "Pomodoro",
-        date: "May, 2024",
+        date: "March-2024",
         projectImage: pomodoroImage,
         repoURL: "https://github.com/aryanh0911/Pomodoro-SvelteKit",
         URL: "",
-        description: "Designed and developed a simple Pomodoro timer. Implemented a Dark-mode toggle using Tailwind.",
-        techStack: ['SvelteKit', 'Tailwind', 'Firebase']
+        description: "Designed and developed a simple Pomodoro timer and implemented a Dark-mode toggle using Tailwind.",
+        techStack: ['SvelteKit', 'Javascript', 'Tailwind']
     }
 ];
 
