@@ -5,7 +5,7 @@
 <div class="{cardNoClass} {generalClass} card rounded-md" on:click>
 	<div class="card-image-container relative">
 		<div class="image-overlay"></div>
-		<img class="card-image" src={projectImage} alt="anything" />
+		<img class="card-image" src={projectImage} alt="A Preview of the project" />
 
 		<div class="text-wrapper absolute z-10 w-[95%] rounded-md">
 			<div class="text-box-overlay"></div>
@@ -46,7 +46,7 @@
 
 	p {
 		/* font-family: 'Noto Sans'; */
-		font-family: 'Poppins';
+		font-family: 'Poppins', sans-serif;
 		user-select: none;
 		-webkit-user-select: none;
 		-ms-user-select: none;

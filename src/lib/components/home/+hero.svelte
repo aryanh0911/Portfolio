@@ -280,7 +280,7 @@
 	.card-text {
 		align-items: center;
 		justify-content: center;
-		font-family: 'M Plus Rounded 1c', monospace;
+		font-family: 'M Plus Rounded 1c', monospace, sans-serif;
 		font-size: 2.2rem;
 		font-weight: 500;
 		font-style: normal;

@@ -145,7 +145,7 @@
 		transform: translate(-50%, -50%);
 		mix-blend-mode: difference;
 		color: #c8c8c8;
-		font-family: 'M Plus Rounded 1c';
+		font-family: 'M Plus Rounded 1c', 'Poppins', sans-serif;
 		font-size: 5rem;
 		@media (max-width: 690px) {
 			font-size: 2.5rem;

@@ -132,9 +132,7 @@
 
 <style>
 	/* FONTS */
-	@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700;800&display=swap');
-	@import url('https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-	@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=M+PLUS+Rounded+1c&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 	* {
 		visibility: hidden;
@@ -156,7 +154,7 @@
 	}
 
 	.main-text div {
-		font-family: 'Averia Sans Libre';
+		font-family: 'Averia Sans Libre', 'Poppins', sans-serif;
 		font-size: 5rem;
 		padding: 1rem;
 		line-height: 0.45;
@@ -231,7 +229,7 @@
 		outline: none;
 		overflow: hidden;
 		padding: 0px 10px;
-		font-family: 'Poppins';
+		font-family: 'Poppins', sans-serif;
 		font-size: 1rem;
 		border-bottom: dotted 2px rgb(71, 180, 227);
 		color: rgb(215, 212, 212);
@@ -239,7 +237,7 @@
 	}
 
 	.inputBox textarea {
-		font-family: 'Poppins';
+		font-family: 'Poppins', sans-serif;
 		width: 100%;
 		height: 120px;
 		border-radius: 5px;
@@ -263,7 +261,7 @@
 	.submit-btn {
 		padding: 10px 26px;
 		color: #fff;
-		font-family: 'Poppins';
+		font-family: 'Poppins', sans-serif;
 		font-size: 1.1rem;
 		font-weight: 600;
 		cursor: pointer;
@@ -290,7 +288,7 @@
 	}
 
 	::placeholder {
-		font-family: 'Poppins';
+		font-family: 'Poppins', sans-serif;
 		font-size: 1rem;
 	}
 
