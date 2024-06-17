@@ -5,7 +5,7 @@
 <div class="socials-div-outside-form flex gap-4 items-center justify-center">
 	{#each socialsData as data}
 		<div class="{data.name} text-[gray] text-2xl hover:text-white">
-			<a href={data.url}><i class={data.icon}></i></a>
+			<a href={data.url} target="_blank"><i class={data.icon}></i></a>
 		</div>
 	{/each}
 </div>
