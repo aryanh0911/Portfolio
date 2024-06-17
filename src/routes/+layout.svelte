@@ -3,22 +3,22 @@
 	import { page } from '$app/stores';
 
 	// Default Title and Favicon
-	let title = 'Portfolio'
+	let title = 'aryan hazarika'
 	// let favicon = '%sveltekit.assets/favicon.png'
 
 	//Route-based reactive title and favicon
 	$: {
 		if($page.url.pathname === '/about') {
-			title = 'About - Portfolio'
+			title = 'About'
 		}
 		else if($page.url.pathname === '/contact') [
-			title =  'Contact - Portfolio'
+			title =  'Contact'
 		]
 		else if($page.url.pathname === '/work') {
-			title = 'Work - Portfolio'
+			title = 'Work'
 		}
 		else {
-			title = 'Portfolio'
+			title = 'aryan hazarika'
 		}
 	}
 </script>
