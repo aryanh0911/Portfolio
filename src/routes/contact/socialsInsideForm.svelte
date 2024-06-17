@@ -1,11 +1,21 @@
 <script>
 	import socialsData from './socialsData';
+
+	function handleClick(event) {
+		event.preventDefault();
+		const url = event.currentTarget.href;
+
+		setTimeout(() => {
+			// window.location.href = url //But this doesn't support '_blank'
+			window.open(url, '_blank');
+		}, 300);
+	}
 </script>
 
 <div class="socials-div-inside-form flex gap-4 items-center justify-center">
 	{#each socialsData as data}
 		<div class="{data.name} text-[gray] text-2xl hover:text-white">
-			<a href={data.url} target="_blank"><i class={data.icon}></i></a>
+			<a href={data.url} on:click|preventDefault={handleClick}><i class={data.icon}></i></a>
 		</div>
 	{/each}
 </div>
