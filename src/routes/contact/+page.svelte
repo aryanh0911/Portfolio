@@ -24,11 +24,14 @@
 	async function handleSubmit(event) {
 		event.preventDefault();
 
+		//Optional email value check
+		const emailValue = email || 'No email provided'
+
 		// Save to Firestore Database
 		try {
 			const docRef = await addDoc(collection(db, 'contacts'), {
 				name,
-				email,
+				email : emailValue,
 				message: msgContent,
 				timestamp: new Date()
 			});
@@ -42,7 +45,7 @@
 			const dbRef = ref(realtimeDb, 'contacts/' + Date.now());
 			await set(dbRef, {
 				name,
-				email,
+				email : emailValue,
 				message: msgContent,
 				timestamp: new Date()
 			});
@@ -98,13 +101,13 @@
 	<div class="form-wrapper">
 		<div class="container">
 			<form on:submit|preventDefault={handleSubmit}>
-				<div class="inputBox font-mont">
+				<div class="inputBox">
 					<input type="text" bind:value={name} placeholder="Type in your name..." />
 				</div>
-				<div class="inputBox font-mont">
-					<input type="email" bind:value={email} placeholder="Type in your e-mail..." />
+				<div class="inputBox">
+					<input type="email" bind:value={email} placeholder="Type in your e-mail (optional)..." />
 				</div>
-				<div class="inputBox font-mont">
+				<div class="inputBox">
 					<textarea bind:value={msgContent} cols="30" rows="10" placeholder="Leave a message..."
 					></textarea>
 				</div>
@@ -112,7 +115,7 @@
 				<div class="bottom w-full flex justify-between">
 					<SocialsInsideForm />
 
-					<div class="submit-btn font-mont rounded-[10px]">
+					<div class="submit-btn rounded-[10px]">
 						<button type="submit" class="submit-text">{submitBtnText}</button>
 					</div>
 				</div>
