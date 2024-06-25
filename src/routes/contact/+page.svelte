@@ -25,13 +25,13 @@
 		event.preventDefault();
 
 		//Optional email value check
-		const emailValue = email || 'No email provided'
+		const emailValue = email || 'No email provided';
 
 		// Save to Firestore Database
 		try {
 			const docRef = await addDoc(collection(db, 'contacts'), {
 				name,
-				email : emailValue,
+				email: emailValue,
 				message: msgContent,
 				timestamp: new Date()
 			});
@@ -45,7 +45,7 @@
 			const dbRef = ref(realtimeDb, 'contacts/' + Date.now());
 			await set(dbRef, {
 				name,
-				email : emailValue,
+				email: emailValue,
 				message: msgContent,
 				timestamp: new Date()
 			});
@@ -172,6 +172,9 @@
 			padding: 1rem;
 			line-height: 0.35;
 		}
+		@media (max-width: 490px) {
+			font-size: 3.2rem;
+		}
 	}
 
 	.form-wrapper {
@@ -237,6 +240,10 @@
 		border-bottom: dotted 2px rgb(71, 180, 227);
 		color: rgb(215, 212, 212);
 		background-color: rgb(72, 72, 72);
+
+		@media (max-width: 460px) {
+			font-size: 0.8rem;
+		}
 	}
 
 	.inputBox textarea {
@@ -293,6 +300,12 @@
 	::placeholder {
 		font-family: 'Poppins', sans-serif;
 		font-size: 1rem;
+	}
+
+	@media (max-width: 460px) {
+		::placeholder {
+			font-size: 0.8rem;
+		}
 	}
 
 	.bottom {
