@@ -272,7 +272,6 @@
 		padding: 10px 26px;
 		color: #fff;
 		font-family: 'Poppins', sans-serif;
-		font-size: 1.1rem;
 		font-weight: 600;
 		cursor: pointer;
 		text-align: center;
