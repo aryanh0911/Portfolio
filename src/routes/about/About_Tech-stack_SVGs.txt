@@ -1,0 +1,5 @@
+Where I'm getting the svgs from - https://www.tech-stack-icons.com/
+
+Where I'm converting the svg code to file - https://editsvgcode.com/#
+
+Note: I'm setting the width and height of the svgs in the svg code from 100 to 48.

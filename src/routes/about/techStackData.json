@@ -1,0 +1,56 @@
+[
+    {
+        "id" : 1,
+        "tech" : "svelteKit",
+        "svgAddress" : "/about-page_assets/tech-stack-svgs/svelte.svg",
+        "popup" : "SvelteKit"
+    },
+    {
+        "id" : 2,
+        "tech" : "typescript",
+        "svgAddress" : "/about-page_assets/tech-stack-svgs/typescript.svg",
+        "popup" : "Typescript"
+    },
+    {
+        "id" : 3,
+        "tech" : "gsap",
+        "svgAddress" : "/about-page_assets/tech-stack-svgs/gsap.svg",
+        "popup" : "GSAP"
+    },
+    {
+        "id" : 4,
+        "tech" : "firebase",
+        "svgAddress" : "/about-page_assets/tech-stack-svgs/firebase.svg",
+        "popup" : "Firebase"
+    },
+    {
+        "id" : 5,
+        "tech" : "javascript",
+        "svgAddress" : "/about-page_assets/tech-stack-svgs/javascript.svg",
+        "popup" : "Javascript"
+    },
+    {
+        "id" : 6,
+        "tech" : "react",
+        "svgAddress" : "/about-page_assets/tech-stack-svgs/react.svg",
+        "popup" : "React"
+    },
+    {
+        "id" : 7,
+        "tech" : "tailwind",
+        "svgAddress" : "/about-page_assets/tech-stack-svgs/tailwind.svg",
+        "popup" : "Tailwind"
+    },
+    {
+        "id" : 8,
+        "tech" : "git",
+        "svgAddress" : "/about-page_assets/tech-stack-svgs/git.svg",
+        "popup" : "Git"
+    },
+    {
+        "id" : 9,
+        "tech" : "npm",
+        "svgAddress" : "/about-page_assets/tech-stack-svgs/npm.svg",
+        "popup" : "NPM"
+    }
+]

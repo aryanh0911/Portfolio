@@ -8,6 +8,7 @@
 	import Cover from './cover.svelte';
 	import Paragraph from './paragraph.svelte';
 	import LinkTile from './linkTile.svelte';
+	import Techstack from './techstack.svelte'
 
 	// ---GSAP---
 	onMount(() => {
@@ -22,14 +23,15 @@
 
 				const tl = gsap.timeline({
 					onStart: () => {
-						gsap.set(['#cover-page', '#para', '#pfp', '#right-pane'], { visibility: 'visible' });
+						// gsap.set(['#cover-page', '#para', '#pfp', '#right-pane'], { visibility: 'visible' });
+						gsap.set('*', { visibility: 'visible'})
 					}
 				});
 
 				tl.from('#cover-page', {
 					opacity: 0,
-					y: 30,
-					duration: 0.3
+					// y: 30,
+					duration: .5
 				})
 					.from('#pfp', {
 						opacity: 0,
@@ -88,7 +90,7 @@
 			window.location.href = '/';
 		}}
 	/>
-	<main class="flex gap-4 lg:gap-14 flex-wrap justify-center mb-4 mt-28 md:mt-32">
+	<main class="flex flex-wrap gap-4 lg:gap-14  justify-around mb-4 mt-28 md:mt-32 max-w-[900px] mx-auto">
 		<Paragraph />
 		<div id="right-pane" class="mt-auto mb-auto">
 			<div class="container flex flex-col gap-4">
@@ -96,10 +98,16 @@
 			</div>
 		</div>
 	</main>
+
+	<Techstack />
 </section>
 
 <style>
-	#right-pane {
+	/* #right-pane {
 		visibility: hidden;
-	}
+	} */
+
+	 * {
+		visibility: hidden;
+	 }
 </style>

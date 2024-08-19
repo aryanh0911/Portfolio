@@ -5,7 +5,7 @@
 {#each LinkTileData as data}
 	<div
 		id={data.revealContainerId}
-		class="w-72 h-20 relative overflow-hidden rounded-lg cursor-pointer"
+		class="w-72 h-[4.2rem] relative overflow-hidden rounded-lg cursor-pointer"
 		tabindex="0"
 		on:click={() =>
 			setTimeout(() => {
