@@ -4,13 +4,13 @@
 	let showPopup = false;
 </script>
 
-<section class="max-w-[580px] mx-auto mt-16 mb-16 px-4 md:px-0">
-	<div class="header text-white text-2xl font-bold flex justify-center mb-4">Techstack</div>
+<section class="techStack-section max-w-[580px] mx-auto mt-16 mb-16 px-4 md:px-0">
+	<div id="techStack-header" class="text-white text-2xl font-bold flex justify-center mb-6">Techstack</div>
 
 	<div class="tech-grid grid grid-cols-5 gap-y-7 place-items-center">
         {#each Techstacks as tech}
             <div class="tech-stack-icon-container">
-                <img
+                <img class="tech-img"
                     src={tech.svgAddress}
                     alt="Icon"
                     on:mouseover={() => (showPopup = true)}
@@ -26,6 +26,10 @@
 </section>
 
 <style>
+	/* *{
+		visibility: hidden;
+	} */
+
 	.header {
 		font-family: 'Poppins', sans-serif;
 	}
