@@ -39,7 +39,7 @@ const floatingCards = [
         projectName: "ML Club",
         date: "May-2024",
         projectImage: mlClubImage,
-        repoURL: "/",
+        repoURL: "https://github.com/aryanh0911/ML_Website",
         URL: "",
         description: "Designed and Developed the official website for Machine Learning Club NIT Silchar",
         techStack: ['SvelteKit', 'Tailwind', 'Firebase']
